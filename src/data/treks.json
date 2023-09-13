@@ -1,0 +1,102 @@
+{
+    "treks": [
+      {
+        "location": "Uttarakhand",
+        "name": "Valley of Flowers Trek",
+        "bestTime": "July to September",
+        "cost": "₹35,000 (approx.)",
+        "duration": "6 days",
+        "difficulty": "Moderate",
+        "altitude": "3,858 meters",
+        "gearNeeded": ["Hiking Boots", "Backpack", "Sleeping Bag", "Rain Jacket"],
+        "basecamp": "Govindghat",
+        "imgSrc": "https://images.unsplash.com/photo-1502439502085-ebf78244370a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80"
+      },
+      {
+        "location": "Uttarakhand",
+        "name": "Har Ki Dun Trek",
+        "bestTime": "April to June, September to November",
+        "cost": "₹32,000 (approx.)",
+        "duration": "7 days",
+        "difficulty": "Moderate",
+        "altitude": "3,566 meters",
+        "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+        "basecamp": "Sankri",
+        "imgSrc": "https://vl-prod-static.b-cdn.net/system/images/000/370/492/c22ddf3761d043e5b199bf3c83fa9134/banner/IMG_3598a.jpg?1576386159"
+      },
+      {
+        "location": "Himachal Pradesh",
+        "name": "Sar Pass Trek",
+        "bestTime": "May to June, September to November",
+        "cost": "₹40,000 (approx.)",
+        "duration": "5 days",
+        "difficulty": "Moderate",
+        "altitude": "4,800 meters",
+        "gearNeeded": ["Trekking Boots", "Trekking Poles", "Warm Clothes"],
+        "basecamp": "Kasol",
+        "imgSrc": "https://images.unsplash.com/photo-1543044449-41a54055192e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+      },
+      {
+        "location": "Himachal Pradesh",
+        "name": "Hampta Pass Trek",
+        "bestTime": "June to October",
+        "cost": "₹45,000 (approx.)",
+        "duration": "6 days",
+        "difficulty": "Moderate",
+        "altitude": "4,268 meters",
+        "gearNeeded": ["Trekking Shoes", "Backpack", "Tent", "Sleeping Bag"],
+        "basecamp": "Manali",
+        "imgSrc": "https://images.unsplash.com/photo-1656833111546-07d98abab448?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      },
+      {
+        "location": "Uttarakhand",
+        "name": "Kedarkantha Trek",
+        "bestTime": "December to April",
+        "cost": "₹28,000 (approx.)",
+        "duration": "6 days",
+        "difficulty": "Moderate",
+        "altitude": "3,810 meters",
+        "gearNeeded": ["Trekking Shoes", "Trekking Poles", "Warm Clothes"],
+        "basecamp": "Sankri",
+        "imgSrc": "https://images.unsplash.com/photo-1606586544557-799a5cda807c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      },
+      {
+        "location": "Uttarakhand",
+        "name": "Roopkund Trek",
+        "bestTime": "May to June, September to October",
+        "cost": "₹38,000 (approx.)",
+        "duration": "8 days",
+        "difficulty": "Moderate",
+        "altitude": "5,029 meters",
+        "gearNeeded": ["Trekking Boots", "Tent", "Sleeping Bag", "Warm Clothing"],
+        "basecamp": "Lohajung",
+        "imgSrc": "https://static01.nyt.com/images/2019/08/27/science/20TB-SKELETONLAKE1/20TB-SKELETONLAKE1-jumbo-v3.jpg?quality=75&auto=webp"
+      },
+      {
+        "location": "Himachal Pradesh",
+        "name": "Beas Kund Trek",
+        "bestTime": "June to October",
+        "cost": "₹34,000 (approx.)",
+        "duration": "4 days",
+        "difficulty": "Easy",
+        "altitude": "3,700 meters",
+        "gearNeeded": ["Hiking Boots", "Backpack", "Sleeping Bag"],
+        "basecamp": "Manali",
+        "imgSrc": "https://indiahikes.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Findiahike%2F74223-Beas-Kund-Trek-Indiahikes-Nitesh-Kumar.jpg%3Fauto%3Dcompress%2Cformat%26rect%3D0%2C152%2C2560%2C1523%26w%3D2560%26h%3D1523&w=1920&q=75"
+      },
+      {
+        "location": "Himachal Pradesh",
+        "name": "Pin Parvati Pass Trek",
+        "bestTime": "July to September",
+        "cost": "₹48,000 (approx.)",
+        "duration": "12 days",
+        "difficulty": "Difficult",
+        "altitude": "5,319 meters",
+        "gearNeeded": ["Trekking Shoes", "Trekking Poles", "Crampons"],
+        "basecamp": "Manikaran",
+        "imgSrc": "https://media1.thrillophilia.com/filestore/3s6p5a2frll5w6nnnn10a87yu9bj_Pin%20Parvati%20Cover.jpg?w=auto&h=600"
+      }
+      
+    ]
+  }
+  
