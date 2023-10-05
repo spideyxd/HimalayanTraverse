@@ -1,0 +1,184 @@
+import React from "react";
+import { useEffect, useState } from "react";
+import { Container, Row, Col, Navbar } from "react-bootstrap";
+import Post from "./Post";
+import { useNavigate } from "react-router-dom";
+import { Button, Form, Card } from "react-bootstrap";
+import NavBar from "./Navbar";
+
+const Feed = () => {
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+  const [comment, setComment] = useState("");
+  const [user, setUser] = React.useState({});
+  const [query, setQuery] = useState("");
+  const [queries, setQueries] = useState([]);
+  const nav = useNavigate();
+
+  React.useEffect(() => {
+    fetch(`${BASE_URL}/getinfo`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    })
+      .then((data) => data.json())
+      .then((userData) => {
+        // Set the user data
+        if(!userData){nav("/login");}
+        setUser(userData);
+
+        // Fetch queries based on user data after setUser
+        return fetch(`${BASE_URL}/queries`, {
+          method: "GET",
+          credentials: "include",
+        });
+      })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {nav("/login");
+          throw new Error("Failed to fetch queries");
+        }
+      })
+      .then((queries) => {
+        // Handle the queries data here
+        // console.log("Queries:", queries);
+        setQueries(queries);
+      })
+      .catch((err) => {
+        console.error(err);
+        nav("/login");
+      });
+  }, []);
+
+  const postQueryToServer = () => {
+    if (query.trim() !== "") {
+      const newQuery = {
+        email: user.email,
+        content: query,
+      };
+
+      // Make a POST request to your server to save the query
+      fetch(`${BASE_URL}/postQuery`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newQuery),
+        credentials: "include",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // console.log("Query posted:", data);
+          window.location.reload();
+        })
+        .catch((error) => {
+          console.error("Error posting query:", error);
+        });
+      setQuery("");
+    }
+  };
+
+  const postComment = async (id) => {
+    try {
+      const response = await fetch(`${BASE_URL}/postComment`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id, comment: comment }),
+        credentials: "include",
+      });
+
+      if (response.ok) {
+        const updatedQuery = await response.json();
+        window.location.reload();
+        // console.log('Comment posted successfully:', updatedQuery);
+
+        // Optionally, update your component state or take other actions as needed
+      } else {
+        throw new Error("Failed to post comment");
+      }
+    } catch (error) {
+      console.error("Error posting comment:", error);
+      // Handle the error, show an error message, or take appropriate action
+    }
+  };
+
+  const handlePost = () => {
+    postQueryToServer();
+  };
+
+  const handleComment = (id) => {
+    postComment(id);
+  };
+
+  return (
+    <>
+      <Container>
+        <NavBar />
+        <div>
+          <Form.Group>
+            <Form.Control
+              // className="mt-5"
+              style={{
+                marginTop: "90px", // Default margin for larger screens
+                "@media (max-width: 768px)": {
+                  marginTop: "10px", // Adjust margin for screens smaller than or equal to 768px
+                },
+                "@media (max-width: 576px)": {
+                  marginTop: "5px", // Adjust margin for screens smaller than or equal to 576px
+                },
+                height: "90px",
+              }}
+              type="text"
+              placeholder="What's your query?"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </Form.Group>
+          <Button className="mt-2" variant="primary" onClick={handlePost}>
+            Post Query
+          </Button>
+        </div>
+        {queries.map((queryy) => (
+          <Card key={queryy._id} className="mb-3 mt-5">
+            <Card.Body>
+              {/* <h1>Query</h1> */}
+              <Post title="Query" content={queryy.content} />
+              {/* <h6>Comments</h6> */}
+              <div>
+                <Form.Group>
+                  <Form.Control
+                    className="mt-4"
+                    type="text"
+                    placeholder="Type Comment ..."
+                    onChange={(e) => setComment(e.target.value)}
+                  />
+                </Form.Group>
+                <Button
+                  className="mt-2 mb-5 btn-sm"
+                  variant="warning"
+                  onClick={() => handleComment(queryy._id)}
+                >
+                  Comment
+                </Button>
+              </div>
+              {queryy.comments.map((comment, index) => (
+                <div key={index}>
+                  <p>
+                    <strong>{comment.author}: </strong> {comment.comment}
+                  </p>
+                </div>
+              ))}
+            </Card.Body>
+          </Card>
+        ))}
+      </Container>
+    </>
+  );
+};
+
+export default Feed;
