@@ -1,0 +1,212 @@
+{
+  "trekking_sites": [
+    {
+      "name": "Valley of Flowers Trek",
+      "base_camp": "Govind Ghat",
+      "coordinates": {
+        "latitude": 30.7281,
+        "longitude": 79.6014
+      }
+    },
+    {
+      "name": "Har Ki Dun Trek",
+      "base_camp": "Sankri",
+      "coordinates": {
+        "latitude": 31.0727,
+        "longitude": 78.2776
+      }
+    },
+    {
+      "name": "shivamk",
+      "base_camp": "Sankri",
+      "coordinates": {
+        "latitude": 28.616898378038158,
+        "longitude":  77.37349642116565
+      }
+    },
+    {
+      "name": "Roopkund Trek",
+      "base_camp": "Lohajung",
+      "coordinates": {
+        "latitude": 30.1725,
+        "longitude": 79.0664
+      }
+    },
+    {
+      "name": "Kedarkantha Trek",
+      "base_camp": "Sankri",
+      "coordinates": {
+        "latitude": 31.0727,
+        "longitude": 78.2776
+      }
+    },
+    {
+      "name": "Gomukh Tapovan Trek",
+      "base_camp": "Gangotri",
+      "coordinates": {
+        "latitude": 30.9859,
+        "longitude": 78.9340
+      }
+    },
+    {
+      "name": "Dodital Trek",
+      "base_camp": "Sangamchatti",
+      "coordinates": {
+        "latitude": 30.4285,
+        "longitude": 78.7600
+      }
+    },
+    {
+      "name": "Kuari Pass Trek",
+      "base_camp": "Joshimath",
+      "coordinates": {
+        "latitude": 30.5682,
+        "longitude": 79.5669
+      }
+    },
+    {
+      "name": "Rupin Pass Trek",
+      "base_camp": "Dhaula",
+      "coordinates": {
+        "latitude": 31.0639,
+        "longitude": 78.2677
+      }
+    },
+    {
+      "name": "Gangotri Glacier Trek",
+      "base_camp": "Gangotri",
+      "coordinates": {
+        "latitude": 30.9859,
+        "longitude": 78.9340
+      }
+    },
+    {
+      "name": "Tungnath and Chandrashila Trek",
+      "base_camp": "Chopta",
+      "coordinates": {
+        "latitude": 30.4487,
+        "longitude": 79.2155
+      }
+    },
+    {
+      "name": "Nag Tibba Trek",
+      "base_camp": "Pantwari",
+      "coordinates": {
+        "latitude": 30.5762,
+        "longitude": 77.8734
+      }
+    },
+    {
+      "name": "Pindari Glacier Trek",
+      "base_camp": "Loharkhet",
+      "coordinates": {
+        "latitude": 29.5401,
+        "longitude": 80.1788
+      }
+    },
+    {
+      "name": "Milam Glacier Trek",
+      "base_camp": "Munsiyari",
+      "coordinates": {
+        "latitude": 30.2290,
+        "longitude": 80.0656
+      }
+    },
+    {
+      "name": "Auden's Col Trek",
+      "base_camp": "Gangotri",
+      "coordinates": {
+        "latitude": 30.9859,
+        "longitude": 78.9340
+      }
+    },
+    {
+      "name": "Harshil Valley Trek",
+      "base_camp": "Harshil",
+      "coordinates": {
+        "latitude": 31.1076,
+        "longitude": 78.7727
+      }
+    },
+    {
+      "name": "Dayara Bugyal Trek",
+      "base_camp": "Barsu",
+      "coordinates": {
+        "latitude": 30.5565,
+        "longitude": 78.6222
+      }
+    },
+    {
+      "name": "Khatling Glacier Trek",
+      "base_camp": "Ghuttu",
+      "coordinates": {
+        "latitude": 30.8546,
+        "longitude": 78.5984
+      }
+    },
+    {
+      "name": "Binsar Trek",
+      "base_camp": "Almora",
+      "coordinates": {
+        "latitude": 29.6280,
+        "longitude": 79.6500
+      }
+    },
+    {
+      "name": "Kafni Glacier Trek",
+      "base_camp": "Loharkhet",
+      "coordinates": {
+        "latitude": 29.5401,
+        "longitude": 80.1788
+      }
+    },
+    {
+      "name": "Madmaheshwar Trek",
+      "base_camp": "Uniana",
+      "coordinates": {
+        "latitude": 30.5864,
+        "longitude": 79.2240
+      }
+    },
+    {
+      "name": "Kanatal Trek",
+      "base_camp": "Kanatal",
+      "coordinates": {
+        "latitude": 30.4175,
+        "longitude": 78.3076
+      }
+    },
+    {
+      "name": "Panch Kedar Trek",
+      "base_camp": "Gaurikund",
+      "coordinates": {
+        "latitude": 30.5294,
+        "longitude": 79.0740
+      }
+    },
+    {
+      "name": "Satopanth Lake Trek",
+      "base_camp": "Mana",
+      "coordinates": {
+        "latitude": 31.5583,
+        "longitude": 79.5730
+      }
+    },
+    {
+      "name": "Bali Pass Trek",
+      "base_camp": "Sankri",
+      "coordinates": {
+        "latitude": 31.0727,
+        "longitude": 78.2776
+      }
+    },
+    {
+      "name": "Kartik Swami Trek",
+      "base_camp": "Kanak Chauri",
+      "coordinates": {
+        "latitude": 30.3760,
+        "longitude": 78.8733
+      }
+    }
+  ]
+}
