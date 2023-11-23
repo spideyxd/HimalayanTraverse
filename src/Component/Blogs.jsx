@@ -3,6 +3,7 @@ import NavBar from "./Navbar";
 import Footer from "./Footer";
 import data from "../data/blogs.json";
 import { Container, Col, Row, Stack, Card, Button } from "react-bootstrap";
+import Fade from "react-reveal/Fade";
 
 const Blogs = () => {
   const treks = data.treks;
@@ -21,6 +22,7 @@ const Blogs = () => {
       <NavBar />
       <Stack>
         <Container>
+          <Fade>
           <Row xs={1} sm={2} md={3}>
             {treks.map((trek, idx) => (
               <Col style={{marginTop:"8rem"}}  md="mx-auto" key={idx}>
@@ -52,6 +54,7 @@ const Blogs = () => {
               </Col>
             ))}
           </Row>
+          </Fade>
         </Container>
       </Stack>
       <Footer />

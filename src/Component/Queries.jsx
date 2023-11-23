@@ -1,14 +1,14 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { Container, Row, Col, Navbar } from "react-bootstrap";
+import { useState } from "react";
+import { Container } from "react-bootstrap";
 import Post from "./Post";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Card } from "react-bootstrap";
 import NavBar from "./Navbar";
-import Fade from "react-reveal/Fade";
 import "./PostStyle.css";
+import Fade from "react-reveal/Fade";
 
-const Feed = () => {
+const Queries = () => {
   const BASE_URL = process.env.REACT_APP_BASE_URL;
   const [comment, setComment] = useState("");
   const [user, setUser] = React.useState({});
@@ -28,11 +28,13 @@ const Feed = () => {
       .then((data) => data.json())
       .then((userData) => {
         // Set the user data
-        if(!userData){nav("/login");}
+        if (!userData) {
+          nav("/login");
+        }
         setUser(userData);
 
         // Fetch queries based on user data after setUser
-        return fetch(`${BASE_URL}/queries`, {
+        return fetch(`${BASE_URL}/allQueries`, {
           method: "GET",
           credentials: "include",
         });
@@ -40,13 +42,12 @@ const Feed = () => {
       .then((response) => {
         if (response.ok) {
           return response.json();
-        } else {nav("/login");
+        } else {
+          nav("/login");
           throw new Error("Failed to fetch queries");
         }
       })
       .then((queries) => {
-        // Handle the queries data here
-        // console.log("Queries:", queries);
         setQueries(queries);
       })
       .catch((err) => {
@@ -59,11 +60,10 @@ const Feed = () => {
     if (query.trim() !== "") {
       const newQuery = {
         email: user.email,
+        author: user.name,
         content: query,
-        author:user.name
       };
 
-      // Make a POST request to your server to save the query
       fetch(`${BASE_URL}/postQuery`, {
         method: "POST",
         headers: {
@@ -74,7 +74,6 @@ const Feed = () => {
       })
         .then((response) => response.json())
         .then((data) => {
-          // console.log("Query posted:", data);
           window.location.reload();
         })
         .catch((error) => {
@@ -98,15 +97,11 @@ const Feed = () => {
       if (response.ok) {
         const updatedQuery = await response.json();
         window.location.reload();
-        // console.log('Comment posted successfully:', updatedQuery);
-
-        // Optionally, update your component state or take other actions as needed
       } else {
         throw new Error("Failed to post comment");
       }
     } catch (error) {
       console.error("Error posting comment:", error);
-      // Handle the error, show an error message, or take appropriate act ion
     }
   };
 
@@ -119,17 +114,41 @@ const Feed = () => {
   };
 
   return (
-    
-      <Container className="bg-cont text-light">
+    <>
+      <Container className="bg-light">
         <NavBar />
-      
+        <div>
+          <Form.Group>
+            <Form.Control
+              // className="mt-5"
+              style={{
+                marginTop: "90px", // Default margin for larger screens
+                "@media (max-width: 768px)": {
+                  marginTop: "10px", // Adjust margin for screens smaller than or equal to 768px
+                },
+                "@media (max-width: 576px)": {
+                  marginTop: "5px", // Adjust margin for screens smaller than or equal to 576px
+                },
+                height: "90px",
+              }}
+              type="text"
+              placeholder="What's your query?"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </Form.Group>
+          <Button className="mt-2" variant="primary" onClick={handlePost}>
+            Post Query
+          </Button>
+        </div>
+        
         {queries.map((queryy) => (
           <Fade>
-          <Card  style={{marginTop:"10vh"}} key={queryy._id} className="bg-post text-dark mb-3 ">
+          <Card key={queryy._id} className="bg-post text-dark mb-3 mt-5">
             <Card.Body>
-              {/* <h1>Query</h1> */}
-              <Post title="Query" author={queryy.author}content={queryy.content} />
-              {/* <h6>Comments</h6> */}
+         
+              <Post title="Query" author={queryy.author} content={queryy.content} />
+             
               <div>
                 <Form.Group>
                   <Form.Control
@@ -159,8 +178,8 @@ const Feed = () => {
           </Fade>
         ))}
       </Container>
-    
+    </>
   );
 };
 
-export default Feed;
+export default Queries;

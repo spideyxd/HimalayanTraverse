@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -12,7 +13,10 @@ import Treks from './Component/Treks';
 import Signup from './Component/Signup';
 import Login from './Component/Login';
 import Feed from './Component/Feed';
-
+import Queries from './Component/Queries';
+import Bar from './Component/Graphs';
+import Test from './Component/Test';
+import AllPost from './Component/AllPost';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,6 +32,9 @@ root.render(
         <Route path="signup" element={<Signup/>}  />  
         <Route path="login" element={<Login/>}  /> 
         <Route path="feed" element={<Feed/>}  /> 
+        <Route path="queries" element={<AllPost/>}  /> 
+        <Route path="bar" element={<Bar/>}  /> 
+        <Route path="test" element={<Test/>}  /> 
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

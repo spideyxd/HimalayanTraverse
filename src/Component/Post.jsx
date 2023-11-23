@@ -1,14 +1,14 @@
-import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import React from "react";
+import { Card, Button } from "react-bootstrap";
 
-const Post = ({ title, content }) => {
+const Post = ({ title, content, author }) => {
   return (
     <Card>
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{content}</Card.Text>
-        {/* <Button variant="primary">Upvote</Button>
-        <Button variant="secondary">Downvote</Button> */}
+        <Card.Title className="font-weight-normal">{author}</Card.Title>
+        <Card.Text >
+           {content}
+        </Card.Text>
       </Card.Body>
     </Card>
   );

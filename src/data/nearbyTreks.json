@@ -17,14 +17,6 @@
       }
     },
     {
-      "name": "shivamk",
-      "base_camp": "Sankri",
-      "coordinates": {
-        "latitude": 28.616898378038158,
-        "longitude":  77.37349642116565
-      }
-    },
-    {
       "name": "Roopkund Trek",
       "base_camp": "Lohajung",
       "coordinates": {
@@ -206,6 +198,230 @@
       "coordinates": {
         "latitude": 30.3760,
         "longitude": 78.8733
+      }
+    },
+    {
+      "name": "Chopta-Tungnath Trek",
+      "base_camp": "Chopta",
+      "coordinates": {
+        "latitude": 30.5565,
+        "longitude": 78.6222
+      }
+    },
+    {
+      "name": "Yamunotri",
+      "base_camp": "Yamunotri",
+      "coordinates": {
+        "latitude": 30.2323,
+        "longitude": 78.6272
+      }
+    },
+    {
+      "name": "Auli",
+      "base_camp": "Joshimath",
+      "coordinates": {
+        "latitude": 30.5405,
+        "longitude": 79.5653
+      }
+    },
+    {
+      "name": "Munsiyari",
+      "base_camp": "Munsiyari",
+      "coordinates": {
+        "latitude": 30.2290,
+        "longitude": 80.0656
+      }
+    },
+    {
+      "name": "Binsar Wildlife Sanctuary",
+      "base_camp": "Binsar",
+      "coordinates": {
+        "latitude": 29.7311,
+        "longitude": 79.6746
+      }
+    },
+    {
+      "name": "Manali",
+      "base_camp": "Manali",
+      "coordinates": {
+        "latitude": 32.2396,
+        "longitude": 77.1887
+      }
+    },
+    {
+      "name": "Kullu",
+      "base_camp": "Kullu",
+      "coordinates": {
+        "latitude": 31.9564,
+        "longitude": 77.1095
+      }
+    },
+    {
+      "name": "Spiti Valley",
+      "base_camp": "Kaza",
+      "coordinates": {
+        "latitude": 32.3522,
+        "longitude": 78.0411
+      }
+    },
+    {
+      "name": "Dalhousie",
+      "base_camp": "Dalhousie",
+      "coordinates": {
+        "latitude": 32.5387,
+        "longitude": 75.9796
+      }
+    },
+    {
+      "name": "Kasol",
+      "base_camp": "Kasol",
+      "coordinates": {
+        "latitude": 31.9654,
+        "longitude": 77.2674
+      }
+    },
+    {
+      "name": "Triund Trek",
+      "base_camp": "McLeod Ganj",
+      "coordinates": {
+        "latitude": 32.2654,
+        "longitude": 76.3163
+      }
+    },
+    {
+      "name": "Bhrigu Lake Trek",
+      "base_camp": "Manali",
+      "coordinates": {
+        "latitude": 32.2640,
+        "longitude": 77.1886
+      }
+    },
+    {
+      "name": "Bara Bhangal Trek",
+      "base_camp": "Manali",
+      "coordinates": {
+        "latitude": 32.2396,
+        "longitude": 77.1887
+      }
+    },
+    {
+      "name": "Pin Parvati Pass Trek",
+      "base_camp": "Kullu",
+      "coordinates": {
+        "latitude": 32.0911,
+        "longitude": 77.1449
+      }
+    },
+    {
+      "name": "Chanderkhani Pass Trek",
+      "base_camp": "Kullu",
+      "coordinates": {
+        "latitude": 31.9662,
+        "longitude": 77.2673
+      }
+    },
+    {
+      "name": "Hampta Pass Trek",
+      "base_camp": "Manali",
+      "coordinates": {
+        "latitude": 32.2396,
+        "longitude": 77.1887
+      }
+    },
+    {
+      "name": "Sar Pass Trek",
+      "base_camp": "Kasol",
+      "coordinates": {
+        "latitude": 31.9654,
+        "longitude": 77.2674
+      }
+    },
+    {
+      "name": "Deo Tibba Trek",
+      "base_camp": "Manali",
+      "coordinates": {
+        "latitude": 32.2640,
+        "longitude": 77.1886
+      }
+    },
+    {
+      "name": "Malana Village Trek",
+      "base_camp": "Malana",
+      "coordinates": {
+        "latitude": 32.0193,
+        "longitude": 77.2400
+      }
+    },
+    {
+      "name": "Kugti Pass Trek",
+      "base_camp": "Bharmour",
+      "coordinates": {
+        "latitude": 32.3653,
+        "longitude": 76.3651
+      }
+    },
+    {
+      "name": "Chamba Trek",
+      "base_camp": "Chamba",
+      "coordinates": {
+        "latitude": 32.5707,
+        "longitude": 76.1250
+      }
+    },
+    {
+      "name": "Kinnaur Kailash Trek",
+      "base_camp": "Sarahan",
+      "coordinates": {
+        "latitude": 31.5145,
+        "longitude": 77.6085
+      }
+    },
+    {
+      "name": "Bhaba Pass Trek",
+      "base_camp": "Shimla",
+      "coordinates": {
+        "latitude": 31.1021,
+        "longitude": 77.2675
+      }
+    },
+    {
+      "name": "Churdhar Trek",
+      "base_camp": "Nohradhar",
+      "coordinates": {
+        "latitude": 30.8794,
+        "longitude": 77.4556
+      }
+    },
+    {
+      "name": "Kanamo Peak Trek",
+      "base_camp": "Kaza",
+      "coordinates": {
+        "latitude": 32.3580,
+        "longitude": 77.4316
+      }
+    },
+    {
+      "name": "Parang La Trek",
+      "base_camp": "Kaza",
+      "coordinates": {
+        "latitude": 32.3522,
+        "longitude": 78.0411
+      }
+    },
+    {
+      "name": "Great Himalayan National Park",
+      "base_camp": "Kullu",
+      "coordinates": {
+        "latitude": 31.7567,
+        "longitude": 77.3771
+      }
+    },
+    {
+      "name": "Lahaul Valley",
+      "base_camp": "Keylong",
+      "coordinates": {
+        "latitude": 32.5800,
+        "longitude": 77.0090
       }
     }
   ]

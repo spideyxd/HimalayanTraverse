@@ -1,8 +1,10 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 import treks from "../data/nearbyTreks.json";
-
+import Fade from "react-reveal/Fade";
+import { Container, Col, Row, Stack, Card } from "react-bootstrap";
+import pic1 from "../assets/images/pic1.jpg";
 
 function calculateDistance(lat1, lon1, lat2, lon2) {
   const a = 6378137; // equatorial radius of the Earth in meters
@@ -26,17 +28,19 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
   while (Math.abs(lambda - lambdaP) > 1e-12 && --iterLimit > 0) {
     sinLambda = Math.sin(lambda);
     cosLambda = Math.cos(lambda);
-    sinSigma = Math.sqrt((cosU2 * sinLambda) * (cosU2 * sinLambda) +
-      (cosU1 * sinU2 - sinU1 * cosU2 * cosLambda) *
-      (cosU1 * sinU2 - sinU1 * cosU2 * cosLambda));
+    sinSigma = Math.sqrt(
+      cosU2 * sinLambda * (cosU2 * sinLambda) +
+        (cosU1 * sinU2 - sinU1 * cosU2 * cosLambda) *
+          (cosU1 * sinU2 - sinU1 * cosU2 * cosLambda)
+    );
     if (sinSigma === 0) {
       return 0; // Co-incident points
     }
     cosSigma = sinU1 * sinU2 + cosU1 * cosU2 * cosLambda;
     sigma = Math.atan2(sinSigma, cosSigma);
-    sinAlpha = cosU1 * cosU2 * sinLambda / sinSigma;
+    sinAlpha = (cosU1 * cosU2 * sinLambda) / sinSigma;
     cosSqAlpha = 1 - sinAlpha * sinAlpha;
-    cos2SigmaM = cosSigma - 2 * sinU1 * sinU2 / cosSqAlpha;
+    cos2SigmaM = cosSigma - (2 * sinU1 * sinU2) / cosSqAlpha;
 
     if (isNaN(cos2SigmaM)) {
       cos2SigmaM = 0; // Equatorial line
@@ -44,25 +48,39 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
 
     const C = (f / 16) * cosSqAlpha * (4 + f * (4 - 3 * cosSqAlpha));
     lambdaP = lambda;
-    lambda = L + (1 - C) * f * sinAlpha *
-      (sigma + C * sinSigma * (cos2SigmaM + C * cosSigma * (-1 + 2 * cos2SigmaM * cos2SigmaM)));
+    lambda =
+      L +
+      (1 - C) *
+        f *
+        sinAlpha *
+        (sigma +
+          C *
+            sinSigma *
+            (cos2SigmaM + C * cosSigma * (-1 + 2 * cos2SigmaM * cos2SigmaM)));
   }
 
   if (iterLimit === 0) {
     return NaN; // Formula failed to converge
   }
 
-  const uSq = cosSqAlpha * (a * a - b * b) / (b * b);
-  const A = 1 + uSq / 16384 * (4096 + uSq * (-768 + uSq * (320 - 175 * uSq)));
-  const B = uSq / 1024 * (256 + uSq * (-128 + uSq * (74 - 47 * uSq)));
-  const deltaSigma = B * sinSigma * (cos2SigmaM + B / 4 * (cosSigma * (-1 + 2 * cos2SigmaM * cos2SigmaM) -
-    B / 6 * cos2SigmaM * (-3 + 4 * sinSigma * sinSigma) * (-3 + 4 * cos2SigmaM * cos2SigmaM)));
+  const uSq = (cosSqAlpha * (a * a - b * b)) / (b * b);
+  const A = 1 + (uSq / 16384) * (4096 + uSq * (-768 + uSq * (320 - 175 * uSq)));
+  const B = (uSq / 1024) * (256 + uSq * (-128 + uSq * (74 - 47 * uSq)));
+  const deltaSigma =
+    B *
+    sinSigma *
+    (cos2SigmaM +
+      (B / 4) *
+        (cosSigma * (-1 + 2 * cos2SigmaM * cos2SigmaM) -
+          (B / 6) *
+            cos2SigmaM *
+            (-3 + 4 * sinSigma * sinSigma) *
+            (-3 + 4 * cos2SigmaM * cos2SigmaM)));
 
   const s = b * A * (sigma - deltaSigma);
 
   return s / 1000; // Convert meters to kilometers
 }
-
 
 function findNearbyPoints(baseLat, baseLon, points) {
   const nearbyPoints = [];
@@ -77,10 +95,10 @@ function findNearbyPoints(baseLat, baseLon, points) {
       point.coordinates.latitude,
       point.coordinates.longitude
     );
-  console.log(distance);
-    if (distance <= 300) {
+    console.log(distance);
+    if (distance <= 250) {
       // console.log(point);
-      nearbyPoints.push(point.name);
+      nearbyPoints.push(point);
     }
   }
   console.log(nearbyPoints);
@@ -126,23 +144,52 @@ function Nearbytreks() {
     );
     setNearbyPoints(result);
   };
-
+  const belowContainerRef = React.useRef(null);
+  const scrollToBelowContainer = () => {
+    belowContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <>
-      <NavBar />
-      <div style={{ marginTop: "10rem" }}>
-        <button onClick={handleFindNearbyPoints}>Find Nearby Points</button>
+    <NavBar />
+    <Container fluid style={{ marginTop: "6vh" }} className=" d-flex justify-content-center">
+      <Fade>
+        <img
+          src={pic1}
+          alt="Your Alt Text"
+          className="img-fluid"
+          style={{ maxWidth: "110%", height: "auto" }}
+        />
+      </Fade>
+      <div className="position-absolute top-50 start-50 translate-middle text-center">
+        <button onClick={() => { handleFindNearbyPoints(); scrollToBelowContainer(); }} className="btn mt-5 btn-lg btn-outline-warning">
+          Find Nearby Points
+        </button>
       </div>
-      <div>
-        <h2>Nearby Points</h2>
-        <ul>
-          {nearbyPoints.map((point) => (
-            <li key={point}>{point}</li> // Add a key to each list item
-          ))}
-        </ul>
-      </div>
-      <Footer />
-    </>
+    </Container>
+
+    <Container  className="mt-5 d-flex justify-content-center">
+      <Row ref={belowContainerRef} xs={1} sm={2} md={3}>
+        {nearbyPoints.map((point, idx) => (
+          <Col style={{ marginTop: "8rem" }} md="mx-auto" key={idx}>
+            <Card className="mx-2" style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://images.unsplash.com/photo-1502439502085-ebf78244370a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80"
+                width="286"
+                height="180"
+              />
+              <Card.Body>
+                <Card.Title>{point.name}</Card.Title>
+                <Card.Text>{point.base_camp}</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+
+    <Footer />
+  </>
   );
 }
 
