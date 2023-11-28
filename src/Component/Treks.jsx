@@ -4,10 +4,29 @@ import Footer from './Footer';
 import { Container, Col, Row, Stack, Card } from 'react-bootstrap';
 import trekData from '../data/treks.json';
 import Fade from 'react-reveal/Fade';
+import "./Trek.css";
 
 const Treks = () => {
   const [fadeStyle, setFadeStyle] = useState('left');
 
+ 
+  const [imgStyle, setImgStyle] = useState({
+    width: '40%',
+    borderRadius: '25px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
+    transition: 'transform 0.3s ease-in-out',
+  });
+  
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(true);
+  };
+
+  const handleHoverLeave = () => {
+    setIsHovered(false);
+  };
+  
   const toggleFadeStyle = () => {
     setFadeStyle(fadeStyle === 'left' ? 'right' : 'left');
   };
@@ -16,18 +35,17 @@ const Treks = () => {
     <>
       <NavBar />
 
-      <Container fluid>
-        <Stack>
+      <Container className='bg-dark' fluid>
+        <Stack >
           {trekData.treks.map((trek, idx) => (
             <Fade key={idx} left={idx % 2 === 0 && fadeStyle === 'left'} right={idx % 2 === 1 || fadeStyle === 'right'}>
               <Row className="mt-4">
                 <Col>
-                  <Card className="mt-5">
+                  <Card key={idx} className="mt-5 ">
                     <Card.Img
-                      style={{ width: '40%' }}
                       src={trek.imgSrc}
                       alt={trek.name}
-                      className="mx-auto my-4"
+                      className={`mx-auto my-4 ${isHovered ? 'hovered-img' : ''}`}
                     />
                     <Card.Body className="mx-auto">
                       <Card.Title>{trek.name}</Card.Title>

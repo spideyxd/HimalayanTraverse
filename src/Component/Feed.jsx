@@ -128,7 +128,7 @@ const Feed = () => {
           <Card  style={{marginTop:"10vh"}} key={queryy._id} className="bg-post text-dark mb-3 ">
             <Card.Body>
               {/* <h1>Query</h1> */}
-              <Post title="Query" author={queryy.author}content={queryy.content} />
+              <Post title="Query" timestamp={queryy.timestamp} author={queryy.author}content={queryy.content} />
               {/* <h6>Comments</h6> */}
               <div>
                 <Form.Group>

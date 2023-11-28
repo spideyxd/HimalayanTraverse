@@ -1,8 +1,11 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import {Navbar,NavDropdown } from "react-bootstrap";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange, } from '@mui/material/colors';
 
 function NavBar() {
   const customNavbarLinkStyle = {
@@ -13,6 +16,12 @@ function NavBar() {
   const BASE_URL = process.env.REACT_APP_BASE_URL;
   const nav = useNavigate();
   const [user, setUser] = useState({});
+
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   React.useEffect(() => {
     fetch(`${BASE_URL}/getinfo`, {
@@ -43,8 +52,8 @@ function NavBar() {
     })
       .then((res) => {
         setUser({});
-        window.location.reload();
-        // nav("/login", { replace: true });
+        // nav("/home");
+        nav("/login");
       })
       .catch((err) => {
         console.log(err);
@@ -71,8 +80,11 @@ function NavBar() {
             <Nav.Link href="/nearbytreks" style={customNavbarLinkStyle}>
               NearBy
             </Nav.Link>
+            <Nav.Link href="/rent" style={customNavbarLinkStyle}>
+            Rent A Gear
+            </Nav.Link>
             <Nav.Link href="/blogs" style={customNavbarLinkStyle}>
-              Blogs
+              Shorts
             </Nav.Link>
             <Nav.Link href="/faq" style={customNavbarLinkStyle}>
               FAQ
@@ -85,20 +97,39 @@ function NavBar() {
             </Nav.Link>
             </Nav>
             <Nav className="ms-auto">
-            {Object.entries(user).length === 0 ? (
-              <Nav.Link href="/queries" className="ms-auto" style={customNavbarLinkStyle}>
-                LOGIN
-              </Nav.Link>
-            ) : (
-              <Nav.Link
-                href="/queries" className="ms-auto"
-                onClick={handleLogout}
-                style={customNavbarLinkStyle}
-              >
-                LOGOUT
-              </Nav.Link>
-            )}
-          </Nav>
+      {Object.entries(user).length === 0 ? (
+        <Nav.Link href="/queries" className="ms-auto" style={customNavbarLinkStyle}>
+          LOGIN
+        </Nav.Link>
+      ) : (
+        <div style={{ position: 'relative' }}>
+          <Avatar
+          sx={{ width: 34, height: 34,bgcolor: deepOrange[500] }}
+           
+            onClick={handleDropdownToggle}
+            style={{ cursor: 'pointer' }}
+          >
+            {user.name[0]}
+          </Avatar>
+          {showDropdown && (
+            <NavDropdown
+              title={null}
+              show={showDropdown}
+              align="end"
+              className="ms-auto"
+              style={{
+                position: 'absolute',
+                top: '100%',
+                right: 0,
+                zIndex: 1000,
+              }}
+            >
+              <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
+            </NavDropdown>
+          )}
+        </div>
+      )}
+    </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

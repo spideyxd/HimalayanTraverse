@@ -3,7 +3,15 @@ import NavBar from "./Navbar";
 import Footer from "./Footer";
 import treks from "../data/nearbyTreks.json";
 import Fade from "react-reveal/Fade";
-import { Container, Col, Row, Stack, Card } from "react-bootstrap";
+import {
+  Container,
+  Col,
+  Row,
+  Stack,
+  Card,
+  Form,
+  Button,
+} from "react-bootstrap";
 import pic1 from "../assets/images/pic1.jpg";
 
 function calculateDistance(lat1, lon1, lat2, lon2) {
@@ -82,11 +90,9 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
   return s / 1000; // Convert meters to kilometers
 }
 
-function findNearbyPoints(baseLat, baseLon, points) {
+function findNearbyPoints(baseLat, baseLon, points,dis) {
   const nearbyPoints = [];
-  console.log(baseLat);
-  console.log(baseLon);
-  console.log(points);
+  
   for (const point of points) {
     // console.log(point);
     const distance = calculateDistance(
@@ -95,8 +101,8 @@ function findNearbyPoints(baseLat, baseLon, points) {
       point.coordinates.latitude,
       point.coordinates.longitude
     );
-    console.log(distance);
-    if (distance <= 250) {
+  //  console.log(distance," ",dis);
+    if (distance <= dis) {
       // console.log(point);
       nearbyPoints.push(point);
     }
@@ -132,64 +138,96 @@ function Nearbytreks() {
       return;
     }
 
+    if (!distanceInput) {
+      console.log("Please enter a valid distance.");
+      return;
+    }
+
     // Reset nearbyPoints to an empty array before finding nearby points
     setNearbyPoints([]);
-
+    const distance = parseFloat(distanceInput);
     const points = treks.trekking_sites;
-
+    // console.log(distance);
     const result = findNearbyPoints(
       location.latitude,
       location.longitude,
-      points
+      points,
+      distance
     );
+    console.log(result);
     setNearbyPoints(result);
   };
   const belowContainerRef = React.useRef(null);
   const scrollToBelowContainer = () => {
-    belowContainerRef.current.scrollIntoView({ behavior: 'smooth' });
+    belowContainerRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  const [distanceInput, setDistanceInput] = useState("");
+
   return (
     <>
-    <NavBar />
-    <Container fluid style={{ marginTop: "6vh" }} className=" d-flex justify-content-center">
-      <Fade>
-        <img
-          src={pic1}
-          alt="Your Alt Text"
-          className="img-fluid"
-          style={{ maxWidth: "110%", height: "auto" }}
-        />
-      </Fade>
-      <div className="position-absolute top-50 start-50 translate-middle text-center">
-        <button onClick={() => { handleFindNearbyPoints(); scrollToBelowContainer(); }} className="btn mt-5 btn-lg btn-outline-warning">
-          Find Nearby Points
-        </button>
-      </div>
-    </Container>
+      <NavBar />
+      <Container
+        fluid
+        style={{ marginTop: "6vh" }}
+        className=" d-flex justify-content-center"
+      >
+        <Fade>
+          <img
+            src={pic1}
+            alt="Your Alt Text"
+            className="img-fluid"
+            style={{ maxWidth: "110%", height: "auto" }}
+          />
+        </Fade>
 
-    <Container  className="mt-5 d-flex justify-content-center">
-      <Row ref={belowContainerRef} xs={1} sm={2} md={3}>
-        {nearbyPoints.map((point, idx) => (
-          <Col style={{ marginTop: "8rem" }} md="mx-auto" key={idx}>
-            <Card className="mx-2" style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://images.unsplash.com/photo-1502439502085-ebf78244370a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80"
-                width="286"
-                height="180"
+        <div className="position-absolute top-50 start-50 translate-middle text-center">
+          <Form>
+            <Form.Group className="mb-3">
+              <Form.Label>Enter Distance (in kilometers)</Form.Label>
+              <Form.Control
+                type="number"
+                placeholder="Enter distance"
+                value={distanceInput}
+                onChange={(e) => setDistanceInput(e.target.value)}
               />
-              <Card.Body>
-                <Card.Title>{point.name}</Card.Title>
-                <Card.Text>{point.base_camp}</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+            </Form.Group>
+            <Button
+              variant="warning"
+              onClick={() => {
+                handleFindNearbyPoints();
+                scrollToBelowContainer();
+              }}
+            >
+              Find Nearby Points
+            </Button>
+          </Form>
+        </div>
+      </Container>
 
-    <Footer />
-  </>
+      <Container className="mt-5 d-flex justify-content-center">
+        <Row ref={belowContainerRef} xs={1} sm={2} md={3}>
+          {nearbyPoints.map((point, idx) => (
+            <Col style={{ marginTop: "8rem" }} md="mx-auto" key={idx}>
+              <Card className="mx-2" style={{ width: "18rem" }}>
+                <Card.Img
+                  variant="top"
+                  src="https://images.unsplash.com/photo-1502439502085-ebf78244370a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80"
+                  width="286"
+                  height="180"
+                />
+                <Card.Body>
+                  <Card.Title>{point.name}</Card.Title>
+                  <Card.Text>{point.base_camp}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+
+      <Footer />
+    </>
   );
 }
 

@@ -147,7 +147,7 @@ const Queries = () => {
           <Card key={queryy._id} className="bg-post text-dark mb-3 mt-5">
             <Card.Body>
          
-              <Post title="Query" author={queryy.author} content={queryy.content} />
+              <Post title="Query" timestamp={queryy.timestamp} author={queryy.author} content={queryy.content} />
              
               <div>
                 <Form.Group>
