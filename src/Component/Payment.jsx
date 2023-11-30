@@ -1,10 +1,12 @@
 import React from 'react';
+import NavBar from './Navbar';
+import { useNavigate } from 'react-router-dom';
 
 const Payment = ({ name, price, quantity }) => {
   const total = price * quantity;
-
+  const nav=useNavigate();
   return (
-    <>
+    <><NavBar/>
       <div className="container text-center">
         <div className="row m-0 justify-content-center">
           <div className="col-lg-5 p-0 ps-lg-4">
@@ -50,7 +52,7 @@ const Payment = ({ name, price, quantity }) => {
                         <input
                           className="form-control"
                           type="text"
-                          defaultValue="4485 6888 2359 1498"
+                          defaultValue=""
                           placeholder="1234 5678 9012 3456"
                         />
                       </span>
@@ -59,7 +61,7 @@ const Payment = ({ name, price, quantity }) => {
                         <input
                           className="form-control2"
                           type="text"
-                          defaultValue="01/2020"
+                          defaultValue=""
                           placeholder="MM/YYYY"
                         />
                       </div>
@@ -70,7 +72,7 @@ const Payment = ({ name, price, quantity }) => {
                         <input
                           className="form-control"
                           type="text"
-                          defaultValue="David J.Frias"
+                          defaultValue=""
                           placeholder="Name"
                         />
                       </span>
@@ -79,7 +81,7 @@ const Payment = ({ name, price, quantity }) => {
                         <input
                           className="form-control3"
                           type="text"
-                          defaultValue={630}
+                          defaultValue=""
                           placeholder="XXX"
                         />
                       </div>
@@ -88,7 +90,13 @@ const Payment = ({ name, price, quantity }) => {
                 </div>
                 <div className="row m-0">
                   <div className="col-12  mb-4 p-0">
-                    <div className="btn btn-primary">
+                    <div className="btn btn-primary"  onClick={() => {
+    // Show success alert
+    window.alert('Purchase successful!');
+
+    // Redirect to "/"
+    nav('/');
+  }} >
                       Purchase
                       <span className="fas fa-arrow-right ps-2" />
                     </div>

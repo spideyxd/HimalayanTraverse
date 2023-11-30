@@ -1,428 +1,623 @@
 {
   "trekking_sites": [
     {
-      "name": "Valley of Flowers Trek",
-      "base_camp": "Govind Ghat",
-      "coordinates": {
-        "latitude": 30.7281,
-        "longitude": 79.6014
-      }
-    },
-    {
+      "location": "Uttarakhand",
       "name": "Har Ki Dun Trek",
-      "base_camp": "Sankri",
-      "coordinates": {
-        "latitude": 31.0727,
-        "longitude": 78.2776
-      }
+      "description": "Har Ki Dun, also known as Valley of Gods, is a cradle-shaped hanging valley in the Garhwal Himalayas. The trek takes you through scenic landscapes, lush green meadows, and dense pine forests, offering mesmerizing views of the Swargarohini peaks.",
+      "BestTime": "April to June, September to November",
+      "cost": 132000,
+      "duration": "7 days",
+      "difficulty": "Moderate",
+      "Altitude": "3,566 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Sankri",
+      "coordinates": { "latitude": 31.0882, "longitude": 78.3866 },
+      "ImgSrc": "https://lh3.googleusercontent.com/p/AF1QipNwPXooi09Pyopqz-X7oykyqYLv1oBrPPPl_NIS=s1360-w1360-h1020"
     },
     {
-      "name": "Roopkund Trek",
-      "base_camp": "Lohajung",
-      "coordinates": {
-        "latitude": 30.1725,
-        "longitude": 79.0664
-      }
-    },
-    {
-      "name": "Kedarkantha Trek",
-      "base_camp": "Sankri",
-      "coordinates": {
-        "latitude": 31.0727,
-        "longitude": 78.2776
-      }
-    },
-    {
-      "name": "Gomukh Tapovan Trek",
-      "base_camp": "Gangotri",
-      "coordinates": {
-        "latitude": 30.9859,
-        "longitude": 78.9340
-      }
-    },
-    {
-      "name": "Dodital Trek",
-      "base_camp": "Sangamchatti",
-      "coordinates": {
-        "latitude": 30.4285,
-        "longitude": 78.7600
-      }
-    },
-    {
-      "name": "Kuari Pass Trek",
-      "base_camp": "Joshimath",
-      "coordinates": {
-        "latitude": 30.5682,
-        "longitude": 79.5669
-      }
-    },
-    {
-      "name": "Rupin Pass Trek",
-      "base_camp": "Dhaula",
-      "coordinates": {
-        "latitude": 31.0639,
-        "longitude": 78.2677
-      }
-    },
-    {
-      "name": "Gangotri Glacier Trek",
-      "base_camp": "Gangotri",
-      "coordinates": {
-        "latitude": 30.9859,
-        "longitude": 78.9340
-      }
-    },
-    {
-      "name": "Tungnath and Chandrashila Trek",
-      "base_camp": "Chopta",
-      "coordinates": {
-        "latitude": 30.4487,
-        "longitude": 79.2155
-      }
-    },
-    {
-      "name": "Nag Tibba Trek",
-      "base_camp": "Pantwari",
-      "coordinates": {
-        "latitude": 30.5762,
-        "longitude": 77.8734
-      }
-    },
-    {
-      "name": "Pindari Glacier Trek",
-      "base_camp": "Loharkhet",
-      "coordinates": {
-        "latitude": 29.5401,
-        "longitude": 80.1788
-      }
-    },
-    {
-      "name": "Milam Glacier Trek",
-      "base_camp": "Munsiyari",
-      "coordinates": {
-        "latitude": 30.2290,
-        "longitude": 80.0656
-      }
-    },
-    {
-      "name": "Auden's Col Trek",
-      "base_camp": "Gangotri",
-      "coordinates": {
-        "latitude": 30.9859,
-        "longitude": 78.9340
-      }
-    },
-    {
-      "name": "Harshil Valley Trek",
-      "base_camp": "Harshil",
-      "coordinates": {
-        "latitude": 31.1076,
-        "longitude": 78.7727
-      }
-    },
-    {
-      "name": "Dayara Bugyal Trek",
-      "base_camp": "Barsu",
-      "coordinates": {
-        "latitude": 30.5565,
-        "longitude": 78.6222
-      }
-    },
-    {
-      "name": "Khatling Glacier Trek",
-      "base_camp": "Ghuttu",
-      "coordinates": {
-        "latitude": 30.8546,
-        "longitude": 78.5984
-      }
-    },
-    {
-      "name": "Binsar Trek",
-      "base_camp": "Almora",
-      "coordinates": {
-        "latitude": 29.6280,
-        "longitude": 79.6500
-      }
-    },
-    {
-      "name": "Kafni Glacier Trek",
-      "base_camp": "Loharkhet",
-      "coordinates": {
-        "latitude": 29.5401,
-        "longitude": 80.1788
-      }
-    },
-    {
-      "name": "Madmaheshwar Trek",
-      "base_camp": "Uniana",
-      "coordinates": {
-        "latitude": 30.5864,
-        "longitude": 79.2240
-      }
-    },
-    {
-      "name": "Kanatal Trek",
-      "base_camp": "Kanatal",
-      "coordinates": {
-        "latitude": 30.4175,
-        "longitude": 78.3076
-      }
-    },
-    {
-      "name": "Panch Kedar Trek",
-      "base_camp": "Gaurikund",
-      "coordinates": {
-        "latitude": 30.5294,
-        "longitude": 79.0740
-      }
-    },
-    {
-      "name": "Satopanth Lake Trek",
-      "base_camp": "Mana",
-      "coordinates": {
-        "latitude": 31.5583,
-        "longitude": 79.5730
-      }
-    },
-    {
-      "name": "Bali Pass Trek",
-      "base_camp": "Sankri",
-      "coordinates": {
-        "latitude": 31.0727,
-        "longitude": 78.2776
-      }
-    },
-    {
-      "name": "Kartik Swami Trek",
-      "base_camp": "Kanak Chauri",
-      "coordinates": {
-        "latitude": 30.3760,
-        "longitude": 78.8733
-      }
-    },
-    {
-      "name": "Chopta-Tungnath Trek",
-      "base_camp": "Chopta",
-      "coordinates": {
-        "latitude": 30.5565,
-        "longitude": 78.6222
-      }
-    },
-    {
-      "name": "Yamunotri",
-      "base_camp": "Yamunotri",
-      "coordinates": {
-        "latitude": 30.2323,
-        "longitude": 78.6272
-      }
-    },
-    {
-      "name": "Auli",
-      "base_camp": "Joshimath",
-      "coordinates": {
-        "latitude": 30.5405,
-        "longitude": 79.5653
-      }
-    },
-    {
-      "name": "Munsiyari",
-      "base_camp": "Munsiyari",
-      "coordinates": {
-        "latitude": 30.2290,
-        "longitude": 80.0656
-      }
-    },
-    {
-      "name": "Binsar Wildlife Sanctuary",
-      "base_camp": "Binsar",
-      "coordinates": {
-        "latitude": 29.7311,
-        "longitude": 79.6746
-      }
-    },
-    {
-      "name": "Manali",
-      "base_camp": "Manali",
-      "coordinates": {
-        "latitude": 32.2396,
-        "longitude": 77.1887
-      }
-    },
-    {
-      "name": "Kullu",
-      "base_camp": "Kullu",
-      "coordinates": {
-        "latitude": 31.9564,
-        "longitude": 77.1095
-      }
-    },
-    {
-      "name": "Spiti Valley",
-      "base_camp": "Kaza",
-      "coordinates": {
-        "latitude": 32.3522,
-        "longitude": 78.0411
-      }
-    },
-    {
-      "name": "Dalhousie",
-      "base_camp": "Dalhousie",
-      "coordinates": {
-        "latitude": 32.5387,
-        "longitude": 75.9796
-      }
-    },
-    {
-      "name": "Kasol",
-      "base_camp": "Kasol",
-      "coordinates": {
-        "latitude": 31.9654,
-        "longitude": 77.2674
-      }
-    },
-    {
-      "name": "Triund Trek",
-      "base_camp": "McLeod Ganj",
-      "coordinates": {
-        "latitude": 32.2654,
-        "longitude": 76.3163
-      }
-    },
-    {
-      "name": "Bhrigu Lake Trek",
-      "base_camp": "Manali",
-      "coordinates": {
-        "latitude": 32.2640,
-        "longitude": 77.1886
-      }
-    },
-    {
-      "name": "Bara Bhangal Trek",
-      "base_camp": "Manali",
-      "coordinates": {
-        "latitude": 32.2396,
-        "longitude": 77.1887
-      }
-    },
-    {
-      "name": "Pin Parvati Pass Trek",
-      "base_camp": "Kullu",
-      "coordinates": {
-        "latitude": 32.0911,
-        "longitude": 77.1449
-      }
-    },
-    {
-      "name": "Chanderkhani Pass Trek",
-      "base_camp": "Kullu",
-      "coordinates": {
-        "latitude": 31.9662,
-        "longitude": 77.2673
-      }
-    },
-    {
+      "location": "Himachal Pradesh",
       "name": "Hampta Pass Trek",
-      "base_camp": "Manali",
-      "coordinates": {
-        "latitude": 32.2396,
-        "longitude": 77.1887
-      }
+      "description": "Hampta Pass Trek is known for its dramatic landscapes, including lush green valleys and barren landscapes. The trail takes you from Kullu Valley to Lahaul and offers breathtaking views of the Pir Panjal range.",
+      "BestTime": "June to October",
+      "cost": 25000,
+      "duration": "5 days",
+      "difficulty": "Moderate",
+      "Altitude": "4,268 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Manali",
+      "coordinates": { "latitude": 32.2396, "longitude": 77.1887 },
+      "ImgSrc": "https://img.traveltriangle.com/blog/wp-content/uploads/2019/03/Hampta-Pass-Trek-1.jpg"
     },
     {
+      "location": "Uttarakhand",
+      "name": "Nag Tibba Trek",
+      "description": "Nag Tibba Trek is a perfect weekend getaway for adventure enthusiasts. The trail offers panoramic views of the snow-capped Himalayan peaks and the Nag Tibba Range.",
+      "BestTime": "Year-round",
+      "cost": 10000,
+      "duration": "2 days",
+      "difficulty": "Easy to Moderate",
+      "Altitude": "3,022 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Dehradun",
+      "coordinates": { "latitude": 30.617, "longitude": 78.06 },
+      "ImgSrc": "https://www.holidify.com/images/cmsuploads/compressed/nagtibbatrek_20190114194041.jpg"
+    },
+
+    {
+      "location": "Himachal Pradesh",
       "name": "Sar Pass Trek",
-      "base_camp": "Kasol",
-      "coordinates": {
-        "latitude": 31.9654,
-        "longitude": 77.2674
-      }
+      "description": "Sar Pass Trek takes you through pine forests, meadows, and quaint villages. The trail offers stunning views of the Parvati Valley and the snow-capped peaks of the Himalayas.",
+      "BestTime": "May to October",
+      "cost": 18000,
+      "duration": "6 days",
+      "difficulty": "Moderate",
+      "Altitude": "4,214 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Kasol",
+      "coordinates": { "latitude": 31.9822, "longitude": 77.307 },
+      "ImgSrc": "https://www.trekatribe.com/wp-content/uploads/2019/01/Sar-Pass-Trek-Featured-Image.jpg"
     },
     {
-      "name": "Deo Tibba Trek",
-      "base_camp": "Manali",
-      "coordinates": {
-        "latitude": 32.2640,
-        "longitude": 77.1886
-      }
+      "location": "Uttarakhand",
+      "name": "Milam Glacier Trek",
+      "description": "Milam Glacier Trek is a high-Altitude trek in the Kumaon region, known for its pristine beauty and panoramic views of the surrounding peaks. The trek takes you to the Milam Glacier, one of the largest glaciers in the region.",
+      "BestTime": "June to September",
+      "cost": 35000,
+      "duration": "12 days",
+      "difficulty": "Challenging",
+      "Altitude": "3,580 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Munsiyari",
+      "coordinates": { "latitude": 30.0688, "longitude": 80.2194 },
+      "ImgSrc": "https://www.euttaranchal.com/images/spot-images/milam-glacier-trek-3.jpg"
     },
     {
-      "name": "Malana Village Trek",
-      "base_camp": "Malana",
-      "coordinates": {
-        "latitude": 32.0193,
-        "longitude": 77.2400
-      }
+      "location": "Himachal Pradesh",
+      "name": "Pin Parvati Pass Trek",
+      "description": "Pin Parvati Pass Trek is a challenging expedition that takes you from the lush greenery of the Parvati Valley to the barren landscapes of Spiti. The trail offers diverse terrains, river crossings, and stunning views.",
+      "BestTime": "July to September",
+      "cost": 40000,
+      "duration": "10 days",
+      "difficulty": "Challenging",
+      "Altitude": "5,319 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Kullu",
+      "coordinates": { "latitude": 32.0146, "longitude": 77.464 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/08/pin-parvati-pass-trek.jpg"
     },
     {
+      "location": "Uttarakhand",
+      "name": "Pindari Glacier Trek",
+      "description": "Pindari Glacier Trek takes you to the Pindari Glacier, surrounded by snow-capped peaks and lush green meadows. The trek offers a glimpse of traditional Himalayan villages and stunning landscapes.",
+      "BestTime": "May to June, September to October",
+      "cost": 25000,
+      "duration": "7 days",
+      "difficulty": "Moderate",
+      "Altitude": "3,820 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Loharkhet",
+      "coordinates": { "latitude": 30.5387, "longitude": 80.108 },
+      "ImgSrc": "https://www.thrillophilia.com/tours/pindari-glacier-trek"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Deo Tibba Base Camp Trek",
+      "description": "Deo Tibba Base Camp Trek offers breathtaking views of Deo Tibba, Indrasan, and other snow-clad peaks. The trail takes you through alpine meadows, dense forests, and picturesque landscapes.",
+      "BestTime": "June to September",
+      "cost": 30000,
+      "duration": "9 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "4,600 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Jagat Sukh",
+      "coordinates": { "latitude": 32.3181, "longitude": 77.521 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2016/11/Deo-Tibba-Trek-Trail.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Brahmatal Trek",
+      "description": "Brahmatal Trek takes you to the pristine Brahmatal Lake surrounded by snow-clad peaks. The trail offers a mix of oak and rhododendron forests, meadows, and panoramic views of the Himalayas.",
+      "BestTime": "December to March",
+      "cost": 18000,
+      "duration": "6 days",
+      "difficulty": "Moderate",
+      "Altitude": "3,450 meters",
+      "gearNeeded": [
+        "Trekking Shoes",
+        "Tent",
+        "Sleeping Bag",
+        "Winter Clothing"
+      ],
+      "Basecamp": "Lohajung",
+      "coordinates": { "latitude": 30.2375, "longitude": 79.5741 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/09/Brahmatal-Trek-Trail-2.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Indrahar Pass Trek",
+      "description": "Indrahar Pass Trek offers stunning views of the Dhauladhar range and the Kangra Valley. The trek takes you through lush green meadows, dense forests, and ancient temples.",
+      "BestTime": "May to June, September to October",
+      "cost": 22000,
+      "duration": "8 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "4,324 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "McLeod Ganj",
+      "coordinates": { "latitude": 32.253, "longitude": 76.3243 },
+      "ImgSrc": "https://www.thrillophilia.com/tours/indrahar-pass-trek"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Kuari Pass Trek",
+      "description": "Kuari Pass Trek, also known as the Lord Curzon Trail, offers panoramic views of the Nanda Devi, Kamet, Dronagiri, and other Himalayan peaks. The trek takes you through beautiful meadows and dense forests.",
+      "BestTime": "April to June, September to November",
+      "cost": 16000,
+      "duration": "6 days",
+      "difficulty": "Easy to Moderate",
+      "Altitude": "3,650 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Joshimath",
+      "coordinates": { "latitude": 30.4422, "longitude": 79.606 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2018/10/kuari-pass-trek-trail-4.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Malana-Chandrakhani Pass Trek",
+      "description": "Malana-Chandrakhani Pass Trek takes you to the ancient village of Malana and the beautiful Chandrakhani Pass. The trek offers cultural insights and stunning views of the Parvati Valley.",
+      "BestTime": "June to September",
+      "cost": 26000,
+      "duration": "7 days",
+      "difficulty": "Moderate",
+      "Altitude": "3,660 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Naggar",
+      "coordinates": { "latitude": 32.0224, "longitude": 77.4248 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/10/Malana-Chanderkhani-Pass-Trek-Trail-1.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Auden's Col Trek",
+      "description": "Auden's Col Trek is a challenging high-Altitude trek that connects Gangotri and Kedarnath. The trek offers breathtaking views of the Gangotri Group of peaks and the Chaukhamba Range.",
+      "BestTime": "June to September",
+      "cost": 45000,
+      "duration": "16 days",
+      "difficulty": "Challenging",
+      "Altitude": "5,490 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Gangotri",
+      "coordinates": { "latitude": 30.9756, "longitude": 78.1666 },
+      "ImgSrc": "https://www.thrillophilia.com/tours/audens-col-trek"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Kheerganga Trek",
+      "description": "Kheerganga Trek is a popular trek known for its natural hot springs. The trail takes you through lush greenery, waterfalls, and panoramic views of the Parvati Valley.",
+      "BestTime": "May to June, September to November",
+      "cost": 12000,
+      "duration": "2 days",
+      "difficulty": "Easy",
+      "Altitude": "2,960 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Barshaini",
+      "coordinates": { "latitude": 32.024, "longitude": 77.4044 },
+      "ImgSrc": "https://www.thrillophilia.com/tours/kheerganga-trek-and-camping"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Panchachuli Base Camp Trek",
+      "description": "Panchachuli Base Camp Trek offers stunning views of the Panchachuli peaks and the Darma Valley. The trek takes you through ancient villages, dense forests, and alpine meadows.",
+      "BestTime": "May to June, September to October",
+      "cost": 30000,
+      "duration": "10 days",
+      "difficulty": "Moderate",
+      "Altitude": "4,300 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Munsyari",
+      "coordinates": { "latitude": 30.2198, "longitude": 80.2352 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2018/08/Panchachuli-Base-Camp-Trek-Trail-1.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Bhrigu Lake Trek",
+      "description": "Bhrigu Lake Trek offers panoramic views of the Bhrigu Lake, surrounded by snow-capped peaks. The trek takes you through lush meadows and offers a high-Altitude experience.",
+      "BestTime": "May to June, September to October",
+      "cost": 20000,
+      "duration": "4 days",
+      "difficulty": "Moderate",
+      "Altitude": "4,300 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Manali",
+      "coordinates": { "latitude": 32.2396, "longitude": 77.1887 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2016/10/Bhrigu-Lake-Trek-Trail-3.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Rupin Pass Trek",
+      "description": "Rupin Pass Trek is a challenging trek known for its diverse landscapes, including waterfalls, forests, and meadows. The trail offers breathtaking views of the Rupin River Valley.",
+      "BestTime": "May to June, September to October",
+      "cost": 35000,
+      "duration": "8 days",
+      "difficulty": "Challenging",
+      "Altitude": "4,650 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Dhaula",
+      "coordinates": { "latitude": 31.9674, "longitude": 78.2706 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/06/Rupin-Pass-Trek-Trail-4.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Chandratal Baralacha Trek",
+      "description": "Chandratal Baralacha Trek takes you to the stunning Chandratal Lake and Baralacha La. The trek offers breathtaking views of the Lahaul Valley and high mountain passes.",
+      "BestTime": "June to September",
+      "cost": 30000,
+      "duration": "7 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "4,890 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Manali",
+      "coordinates": { "latitude": 32.2396, "longitude": 77.1887 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/06/Chandratal-Baralacha-Trek-Trail-1.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Bali Pass Trek",
+      "description": "Bali Pass Trek is a challenging high-Altitude trek that connects the Har Ki Dun Valley to the Yamunotri Valley. The trail offers spectacular views of the Swargarohini peaks.",
+      "BestTime": "June to September",
+      "cost": 40000,
+      "duration": "11 days",
+      "difficulty": "Challenging",
+      "Altitude": "4,950 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Sankri",
+      "coordinates": { "latitude": 31.0882, "longitude": 78.3866 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2019/05/Bali-Pass-Trek-Trail-3.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Bara Bhangal Trek",
+      "description": "Bara Bhangal Trek is a remote and less-explored trek that takes you to the Bara Bhangal village. The trail offers a unique cultural experience and views of the Dhauladhar range.",
+      "BestTime": "June to September",
+      "cost": 25000,
+      "duration": "9 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "3,530 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Bir",
+      "coordinates": { "latitude": 32.0404, "longitude": 76.7183 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2019/06/Bara-Bhangal-Trek-Trail-1.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Dayara Bugyal Trek",
+      "description": "Dayara Bugyal Trek is known for its vast meadows and panoramic views of the Himalayan peaks. The trek offers a serene experience in the alpine meadows.",
+      "BestTime": "May to June, September to November",
+      "cost": 18000,
+      "duration": "6 days",
+      "difficulty": "Easy to Moderate",
+      "Altitude": "3,408 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Barsu",
+      "coordinates": { "latitude": 30.106, "longitude": 78.6783 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/11/Dayara-Bugyal-Trek-Trail-2.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
       "name": "Kugti Pass Trek",
-      "base_camp": "Bharmour",
-      "coordinates": {
-        "latitude": 32.3653,
-        "longitude": 76.3651
-      }
+      "description": "Kugti Pass Trek is a challenging trek that takes you through remote villages and beautiful landscapes. The trail offers stunning views of the Pir Panjal range.",
+      "BestTime": "June to September",
+      "cost": 32000,
+      "duration": "10 days",
+      "difficulty": "Challenging",
+      "Altitude": "4,915 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Bharmour",
+      "coordinates": { "latitude": 32.3763, "longitude": 76.3047 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/08/Kugti-Pass-Trek-Trail-3.jpg"
     },
     {
-      "name": "Chamba Trek",
-      "base_camp": "Chamba",
-      "coordinates": {
-        "latitude": 32.5707,
-        "longitude": 76.1250
-      }
+      "location": "Uttarakhand",
+      "name": "Kafni Glacier Trek",
+      "description": "Kafni Glacier Trek takes you to the pristine Kafni Glacier surrounded by panoramic views of the Nanda Kot and Nanda Bhanar peaks. The trek offers a remote and serene experience.",
+      "BestTime": "May to June, September to October",
+      "cost": 28000,
+      "duration": "11 days",
+      "difficulty": "Challenging",
+      "Altitude": "3,860 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Bageshwar",
+      "coordinates": { "latitude": 30.0465, "longitude": 79.8607 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2018/10/Kafni-Glacier-Trek-Trail-2.jpg"
     },
     {
-      "name": "Kinnaur Kailash Trek",
-      "base_camp": "Sarahan",
-      "coordinates": {
-        "latitude": 31.5145,
-        "longitude": 77.6085
-      }
+      "location": "Himachal Pradesh",
+      "name": "Sar Pass Trek",
+      "description": "Sar Pass Trek takes you through pine forests, meadows, and quaint villages. The trail offers stunning views of the Parvati Valley and the snow-capped peaks of the Himalayas.",
+      "BestTime": "May to October",
+      "cost": 18000,
+      "duration": "6 days",
+      "difficulty": "Moderate",
+      "Altitude": "4,214 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Kasol",
+      "coordinates": { "latitude": 31.9822, "longitude": 77.307 },
+      "ImgSrc": "https://www.trekatribe.com/wp-content/uploads/2019/01/Sar-Pass-Trek-Featured-Image.jpg"
     },
     {
-      "name": "Bhaba Pass Trek",
-      "base_camp": "Shimla",
-      "coordinates": {
-        "latitude": 31.1021,
-        "longitude": 77.2675
-      }
+      "location": "Uttarakhand",
+      "name": "Milam Glacier Trek",
+      "description": "Milam Glacier Trek is a high-Altitude trek in the Kumaon region, known for its pristine beauty and panoramic views of the surrounding peaks. The trek takes you to the Milam Glacier, one of the largest glaciers in the region.",
+      "BestTime": "June to September",
+      "cost": 35000,
+      "duration": "12 days",
+      "difficulty": "Challenging",
+      "Altitude": "3,580 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Munsiyari",
+      "coordinates": { "latitude": 30.0688, "longitude": 80.2194 },
+      "ImgSrc": "https://www.euttaranchal.com/images/spot-images/milam-glacier-trek-3.jpg"
     },
     {
-      "name": "Churdhar Trek",
-      "base_camp": "Nohradhar",
-      "coordinates": {
-        "latitude": 30.8794,
-        "longitude": 77.4556
-      }
+      "location": "Himachal Pradesh",
+      "name": "Pin Parvati Pass Trek",
+      "description": "Pin Parvati Pass Trek is a challenging expedition that takes you from the lush greenery of the Parvati Valley to the barren landscapes of Spiti. The trail offers diverse terrains, river crossings, and stunning views.",
+      "BestTime": "July to September",
+      "cost": 40000,
+      "duration": "10 days",
+      "difficulty": "Challenging",
+      "Altitude": "5,319 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Kullu",
+      "coordinates": { "latitude": 32.0146, "longitude": 77.464 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/08/pin-parvati-pass-trek.jpg"
     },
     {
-      "name": "Kanamo Peak Trek",
-      "base_camp": "Kaza",
-      "coordinates": {
-        "latitude": 32.3580,
-        "longitude": 77.4316
-      }
+      "location": "Uttarakhand",
+      "name": "Pindari Glacier Trek",
+      "description": "Pindari Glacier Trek takes you to the Pindari Glacier, surrounded by snow-capped peaks and lush green meadows. The trek offers a glimpse of traditional Himalayan villages and stunning landscapes.",
+      "BestTime": "May to June, September to October",
+      "cost": 25000,
+      "duration": "7 days",
+      "difficulty": "Moderate",
+      "Altitude": "3,820 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Loharkhet",
+      "coordinates": { "latitude": 30.5387, "longitude": 80.108 },
+      "ImgSrc": "https://www.thrillophilia.com/tours/pindari-glacier-trek"
     },
     {
-      "name": "Parang La Trek",
-      "base_camp": "Kaza",
-      "coordinates": {
-        "latitude": 32.3522,
-        "longitude": 78.0411
-      }
+      "location": "Himachal Pradesh",
+      "name": "Deo Tibba Base Camp Trek",
+      "description": "Deo Tibba Base Camp Trek offers breathtaking views of Deo Tibba, Indrasan, and other snow-clad peaks. The trail takes you through alpine meadows, dense forests, and picturesque landscapes.",
+      "BestTime": "June to September",
+      "cost": 30000,
+      "duration": "9 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "4,600 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Jagat Sukh",
+      "coordinates": { "latitude": 32.3181, "longitude": 77.521 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2016/11/Deo-Tibba-Trek-Trail.jpg"
     },
     {
-      "name": "Great Himalayan National Park",
-      "base_camp": "Kullu",
-      "coordinates": {
-        "latitude": 31.7567,
-        "longitude": 77.3771
-      }
+      "location": "Uttarakhand",
+      "name": "Brahmatal Trek",
+      "description": "Brahmatal Trek takes you to the pristine Brahmatal Lake surrounded by snow-clad peaks. The trail offers a mix of oak and rhododendron forests, meadows, and panoramic views of the Himalayas.",
+      "BestTime": "December to March",
+      "cost": 18000,
+      "duration": "6 days",
+      "difficulty": "Moderate",
+      "Altitude": "3,450 meters",
+      "gearNeeded": [
+        "Trekking Shoes",
+        "Tent",
+        "Sleeping Bag",
+        "Winter Clothing"
+      ],
+      "Basecamp": "Lohajung",
+      "coordinates": { "latitude": 32.3606, "longitude": 79.4675 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2018/04/Brahmatal-Trek-Trail-2.jpg"
     },
     {
-      "name": "Lahaul Valley",
-      "base_camp": "Keylong",
-      "coordinates": {
-        "latitude": 32.5800,
-        "longitude": 77.0090
-      }
+      "location": "Himachal Pradesh",
+      "name": "Hampta Pass Trek",
+      "description": "Hampta Pass Trek is known for its dramatic landscapes, including lush green valleys and barren landscapes of Lahaul. The trek takes you to the Hampta Pass, offering breathtaking views of the Himalayas.",
+      "BestTime": "June to September",
+      "cost": 22000,
+      "duration": "5 days",
+      "difficulty": "Moderate",
+      "Altitude": "4,270 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Manali",
+      "coordinates": { "latitude": 32.2396, "longitude": 77.1887 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2019/03/Hampta-Pass-Trek-Trail-3.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Har Ki Dun Trek",
+      "description": "Har Ki Dun Trek is a classic trek in the Garhwal Himalayas, known for its picturesque beauty and ancient villages. The trail takes you to the Har Ki Dun Valley surrounded by snow-capped peaks.",
+      "BestTime": "April to June, September to November",
+      "cost": 25000,
+      "duration": "7 days",
+      "difficulty": "Easy to Moderate",
+      "Altitude": "3,566 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Sankri",
+      "coordinates": { "latitude": 31.0683, "longitude": 78.4534 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2016/09/Har-Ki-Dun-Trek-Trail-3.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Manimahesh Lake Trek",
+      "description": "Manimahesh Lake Trek takes you to the sacred Manimahesh Lake, surrounded by the stunning backdrop of the Pir Panjal range. The trek is known for its religious significance and breathtaking views.",
+      "BestTime": "July to September",
+      "cost": 28000,
+      "duration": "9 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "4,080 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Bharmour",
+      "coordinates": { "latitude": 32.397, "longitude": 76.5087 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2019/09/Manimahesh-Lake-Trek-Trail-1.jpg"
+    },
+
+    {
+      "location": "Uttarakhand",
+      "name": "Gomukh Tapovan Trek",
+      "description": "Gomukh Tapovan Trek takes you to the source of the Ganges River, Gomukh, and the high-Altitude meadows of Tapovan. The trek offers panoramic views of the Bhagirathi peaks.",
+      "BestTime": "May to June, September to October",
+      "cost": 30000,
+      "duration": "9 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "4,463 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Gangotri",
+      "coordinates": { "latitude": 30.986, "longitude": 78.935 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2019/11/Gaumukh-Tapovan-Trek-Trail-4.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Indrahar Pass Trek",
+      "description": "Indrahar Pass Trek offers stunning views of the Dhauladhar range and the Kangra Valley. The trek takes you to the Indrahar Pass at an Altitude of 4,342 meters.",
+      "BestTime": "May to June, September to November",
+      "cost": 22000,
+      "duration": "5 days",
+      "difficulty": "Moderate",
+      "Altitude": "4,342 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Dharamshala",
+      "coordinates": { "latitude": 32.219, "longitude": 76.3234 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2016/11/Indrahar-Pass-Trek-Trail-2.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Auden's Col Trek",
+      "description": "Auden's Col Trek is a challenging high-Altitude trek that connects the Rudugaira Valley to the Bhilangna Valley. The trail crosses the Auden's Col at an Altitude of 5,490 meters.",
+      "BestTime": "May to June, September to October",
+      "cost": 40000,
+      "duration": "16 days",
+      "difficulty": "Challenging",
+      "Altitude": "5,490 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Gangotri",
+      "coordinates": { "latitude": 30.9747, "longitude": 78.9375 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/09/Audens-Col-Trek-Trail-1.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Friendship Peak Trek",
+      "description": "Friendship Peak Trek is a popular trek in the Pir Panjal range, known for its stunning views and relatively moderate difficulty. The trek takes you to the Friendship Peak at an Altitude of 5,289 meters.",
+      "BestTime": "June to October",
+      "cost": 30000,
+      "duration": "9 days",
+      "difficulty": "Moderate",
+      "Altitude": "5,289 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Manali",
+      "coordinates": { "latitude": 32.2396, "longitude": 77.1887 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/08/Friendship-Peak-Trek-Trail-2.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Roopkund Lake Trek",
+      "description": "Roopkund Lake Trek is famous for the mysterious Roopkund Lake, also known as the Skeleton Lake, due to the presence of human skeletons at its bottom. The trek offers stunning views of the Trishul peaks.",
+      "BestTime": "May to June, September to October",
+      "cost": 25000,
+      "duration": "8 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "4,800 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Lohajung",
+      "coordinates": { "latitude": 30.1588, "longitude": 79.6575 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2017/10/Roopkund-Lake-Trek-Trail-3.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Sach Pass Trek",
+      "description": "Sach Pass Trek is a challenging trek that takes you through the picturesque landscapes of the Chamba Valley. The trail offers views of the Pangi Valley and the Great Himalayan Range.",
+      "BestTime": "June to September",
+      "cost": 32000,
+      "duration": "10 days",
+      "difficulty": "Challenging",
+      "Altitude": "4,420 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Bairagarh",
+      "coordinates": { "latitude": 32.2343, "longitude": 76.6346 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2018/07/Sach-Pass-Trek-Trail-2.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Kedarkantha Trek",
+      "description": "Kedarkantha Trek is a popular winter trek known for its snow-covered landscapes and stunning views of the Himalayas. The trail takes you to the Kedarkantha Peak at an Altitude of 3,810 meters.",
+      "BestTime": "December to April",
+      "cost": 18000,
+      "duration": "6 days",
+      "difficulty": "Easy to Moderate",
+      "Altitude": "3,810 meters",
+      "gearNeeded": [
+        "Trekking Shoes",
+        "Tent",
+        "Sleeping Bag",
+        "Winter Clothing"
+      ],
+      "Basecamp": "Sankri",
+      "coordinates": { "latitude": 31.0722, "longitude": 78.2752 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2016/10/Kedarkantha-Trek-Trail-1.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Chandrakhani Pass Trek",
+      "description": "Chandrakhani Pass Trek takes you through beautiful meadows, dense forests, and charming villages. The trail offers panoramic views of the Parvati Valley and the Chandrakhani Pass at an Altitude of 3,660 meters.",
+      "BestTime": "May to June, September to November",
+      "cost": 20000,
+      "duration": "7 days",
+      "difficulty": "Moderate",
+      "Altitude": "3,660 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Naggar",
+      "coordinates": { "latitude": 32.0081, "longitude": 77.3214 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2019/02/Chandrakhani-Pass-Trek-Trail-1.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Gauri Shankar Trek",
+      "description": "Gauri Shankar Trek is a scenic trek that takes you to the base of Gauri Shankar Peak, one of the highest peaks in the Indian Himalayas. The trail offers breathtaking views of the surrounding peaks and alpine meadows.",
+      "BestTime": "May to June, September to November",
+      "cost": 28000,
+      "duration": "10 days",
+      "difficulty": "Moderate to Challenging",
+      "Altitude": "4,010 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Kathgodam",
+      "coordinates": { "latitude": 30.9648, "longitude": 79.0183 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2019/09/Gauri-Shankar-Trek-Trail-2.jpg"
+    },
+    {
+      "location": "Himachal Pradesh",
+      "name": "Malana Village Trek",
+      "description": "Malana Village Trek takes you to the isolated village of Malana, known for its distinct culture and traditions. The trail offers views of the Malana Glacier and snow-capped peaks.",
+      "BestTime": "June to September",
+      "cost": 18000,
+      "duration": "5 days",
+      "difficulty": "Easy to Moderate",
+      "Altitude": "2,652 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Kasol",
+      "coordinates": { "latitude": 32.009, "longitude": 77.3157 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2018/09/Malana-Village-Trek-Trail-1.jpg"
+    },
+    {
+      "location": "Uttarakhand",
+      "name": "Nag Tibba Trek",
+      "description": "Nag Tibba Trek is a perfect trek for beginners, offering stunning views of the Swargarohini and Bandarpoonch peaks. The trail takes you to the Nag Tibba summit at an Altitude of 3,022 meters.",
+      "BestTime": "September to June",
+      "cost": 15000,
+      "duration": "3 days",
+      "difficulty": "Easy",
+      "Altitude": "3,022 meters",
+      "gearNeeded": ["Trekking Shoes", "Tent", "Sleeping Bag", "Warm Clothing"],
+      "Basecamp": "Dehradun",
+      "coordinates": { "latitude": 30.6744, "longitude": 77.7066 },
+      "ImgSrc": "https://www.trekthehimalayas.com/blog/wp-content/uploads/2019/09/Nag-Tibba-Trek-Trail-3.jpg"
     }
   ]
 }

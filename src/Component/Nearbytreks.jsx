@@ -11,6 +11,7 @@ import {
   Card,
   Form,
   Button,
+  Pagination,
 } from "react-bootstrap";
 import pic1 from "../assets/images/pic1.jpg";
 
@@ -90,20 +91,19 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
   return s / 1000; // Convert meters to kilometers
 }
 
-function findNearbyPoints(baseLat, baseLon, points,dis) {
+function findNearbyPoints(baseLat, baseLon, points, dis) {
   const nearbyPoints = [];
-  
+
   for (const point of points) {
-    // console.log(point);
+    console.log(point.coordinates.latitude);
     const distance = calculateDistance(
       baseLat,
       baseLon,
       point.coordinates.latitude,
       point.coordinates.longitude
     );
-  //  console.log(distance," ",dis);
+
     if (distance <= dis) {
-      // console.log(point);
       nearbyPoints.push(point);
     }
   }
@@ -114,6 +114,8 @@ function findNearbyPoints(baseLat, baseLon, points,dis) {
 function Nearbytreks() {
   const [location, setLocation] = useState(null); // Initialize with null
   const [nearbyPoints, setNearbyPoints] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(3);
 
   useEffect(() => {
     // Use useEffect to get the user's location when the component mounts
@@ -133,6 +135,7 @@ function Nearbytreks() {
   }, []); // Empty dependency array ensures this runs once on component mount
 
   const handleFindNearbyPoints = () => {
+    console.log(location);
     if (!location) {
       console.log("Location is not available yet.");
       return;
@@ -156,13 +159,31 @@ function Nearbytreks() {
     );
     console.log(result);
     setNearbyPoints(result);
+    
   };
+
+  useEffect(() => {
+    // This effect will run every time nearbyPoints state changes
+    if (nearbyPoints.length > 0) {
+      scrollToBelowContainer();
+    }
+  }, [nearbyPoints]);
+
   const belowContainerRef = React.useRef(null);
   const scrollToBelowContainer = () => {
     belowContainerRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+
   const [distanceInput, setDistanceInput] = useState("");
+
+  const handlePagination = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = nearbyPoints.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <>
@@ -196,7 +217,7 @@ function Nearbytreks() {
               variant="warning"
               onClick={() => {
                 handleFindNearbyPoints();
-                scrollToBelowContainer();
+                
               }}
             >
               Find Nearby Points
@@ -207,23 +228,51 @@ function Nearbytreks() {
 
       <Container className="mt-5 d-flex justify-content-center">
         <Row ref={belowContainerRef} xs={1} sm={2} md={3}>
-          {nearbyPoints.map((point, idx) => (
+          {currentItems.map((point, idx) => ( 
             <Col style={{ marginTop: "8rem" }} md="mx-auto" key={idx}>
-              <Card className="mx-2" style={{ width: "18rem" }}>
-                <Card.Img
-                  variant="top"
-                  src="https://images.unsplash.com/photo-1502439502085-ebf78244370a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1898&q=80"
-                  width="286"
-                  height="180"
-                />
-                <Card.Body>
-                  <Card.Title>{point.name}</Card.Title>
-                  <Card.Text>{point.base_camp}</Card.Text>
-                </Card.Body>
-              </Card>
+             <Card className="mx-2 bg-light" style={{ width: "18rem", transition: "transform 0.5s, box-shadow 0.5s" }} onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "perspective(1000px) rotateY(20deg)";
+        e.currentTarget.style.boxShadow = "0 10px 20px rgba(0, 0, 0, 1)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "none";
+        e.currentTarget.style.boxShadow = "none";
+      }}>
+  <Card.Img variant="top" src={point.ImgSrc} width="286" height="180" />
+  <Card.Body>
+    <Card.Title>{point.name}</Card.Title>
+    <Card.Text>
+      <strong>Location:</strong> {point.location}<br />
+      <strong>Best Time:</strong> {point.BestTime}<br />
+      <strong>Cost:</strong>  &#8377;{point.cost}<br />
+      <strong>Duration:</strong> {point.duration}<br />
+      <strong>Difficulty:</strong> {point.difficulty}<br />
+      <strong>Altitude:</strong> {point.Altitude}<br />
+      <strong>Gear Needed:</strong> {point.gearNeeded.join(", ")}<br />
+      <strong>Basecamp:</strong> {point.Basecamp}<br />
+    </Card.Text>
+  </Card.Body>
+</Card>
+
             </Col>
           ))}
         </Row>
+      </Container>
+
+      <Container className="mt-5 d-flex justify-content-center">
+        <Pagination>
+          {Array.from({
+            length: Math.ceil(nearbyPoints.length / itemsPerPage),
+          }).map((_, index) => (
+            <Pagination.Item
+              key={index + 1}
+              active={index + 1 === currentPage}
+              onClick={() => handlePagination(index + 1)}
+            >
+              {index + 1}
+            </Pagination.Item>
+          ))}
+        </Pagination>
       </Container>
 
       <Footer />

@@ -5,6 +5,8 @@ import { Container, Button, Col, Row, Stack, Card } from "react-bootstrap";
 import treks from "../data/Gears.json";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
+import bg from "../assets/images/bg.jpg";
+
 
 const Rent = () => {
   const [fadeStyle, setFadeStyle] = useState("left");
@@ -16,7 +18,15 @@ const Rent = () => {
   return (
     <>
       <NavBar />
-      <Stack className="bg-light">
+      <Stack
+      className="bg-light"
+      // style={{
+      //   backgroundImage: "url()",
+      //   backgroundSize: "cover",
+      //   filter: "blur(5px)", // Adjust the blur amount as needed
+      //   height: "300px", // Set the height as needed
+      // }}
+    >
         <Container>
           <Fade>
             <Row xs={1} sm={2} md={3}>
