@@ -28,7 +28,9 @@ const Feed = () => {
       .then((data) => data.json())
       .then((userData) => {
         // Set the user data
-        if(!userData){nav("/login");}
+        if (!userData) {
+          nav("/login");
+        }
         setUser(userData);
 
         // Fetch queries based on user data after setUser
@@ -40,7 +42,8 @@ const Feed = () => {
       .then((response) => {
         if (response.ok) {
           return response.json();
-        } else {nav("/login");
+        } else {
+          nav("/login");
           throw new Error("Failed to fetch queries");
         }
       })
@@ -60,7 +63,7 @@ const Feed = () => {
       const newQuery = {
         email: user.email,
         content: query,
-        author:user.name
+        author: user.name,
       };
 
       // Make a POST request to your server to save the query
@@ -119,16 +122,24 @@ const Feed = () => {
   };
 
   return (
-    
-      <Container className="bg-cont text-light">
-        <NavBar />
-      
-        {queries.map((queryy) => (
-          <Fade>
-          <Card  style={{marginTop:"10vh"}} key={queryy._id} className="bg-post text-dark mb-3 ">
+    <Container className="bg-cont text-light">
+      <NavBar />
+
+      {queries.map((queryy) => (
+        <Fade>
+          <Card
+            style={{ marginTop: "10vh" }}
+            key={queryy._id}
+            className="bg-post text-dark mb-3 "
+          >
             <Card.Body>
               {/* <h1>Query</h1> */}
-              <Post title="Query" timestamp={queryy.timestamp} author={queryy.author}content={queryy.content} />
+              <Post
+                title="Query"
+                timestamp={queryy.timestamp}
+                author={queryy.author}
+                content={queryy.content}
+              />
               {/* <h6>Comments</h6> */}
               <div>
                 <Form.Group>
@@ -156,10 +167,9 @@ const Feed = () => {
               ))}
             </Card.Body>
           </Card>
-          </Fade>
-        ))}
-      </Container>
-    
+        </Fade>
+      ))}
+    </Container>
   );
 };
 

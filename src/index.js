@@ -20,9 +20,19 @@ import Rent from "./Component/Rent";
 import Stepperr from "./Component/Stepper";
 import AddressForm from "./Component/Address";
 import AddBlogs from "./Component/AddBlogs";
+import AddTreks from "./Component/AddTreks";
+import PersonalProfile from "./Component/Dashboard";
+import ProfileDetails from "./Component/ProfileDetails";
+import FindPeer from "./Component/FindPeer";
+import HiddenGems from "./Component/HiddenGems";
+import { ChakraProvider } from '@chakra-ui/react'
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
 root.render(
   <React.StrictMode>
+    {/* <ChakraProvider> */}
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -38,11 +48,17 @@ root.render(
         <Route path="test" element={<Test />} />
         <Route path="rent" element={<Rent/>} />
         <Route path="postBlogs" element={<AddBlogs/>} />
+        <Route path="addTreks" element={<AddTreks/>} />
         <Route path="stepper" element={<Stepperr/>} />
         <Route path="payment" element={<Payment />} />
         <Route path="address" element={<AddressForm/>} />
+        <Route path="profileDetails" element={<ProfileDetails/>} />
+        <Route path="dashboard" element={<PersonalProfile/>} />
+        <Route path="findPeer" element={<FindPeer/>} />
+        <Route path="HiddenGems" element={<HiddenGems/>} />
       </Routes>
     </BrowserRouter>
+    {/* </ChakraProvider> */}
   </React.StrictMode>
 );
 

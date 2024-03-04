@@ -36,7 +36,7 @@ function Login(purpose) {
       .then((data) => {
         if (data.msg === "error") alert("Invalid credentials");
         else {
-          nav("/queries");
+          nav("/dashboard");
         }
       })
       .catch((error) => {

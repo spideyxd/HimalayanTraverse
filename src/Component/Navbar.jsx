@@ -4,7 +4,6 @@ import {Navbar,NavDropdown } from "react-bootstrap";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
 import { deepOrange, } from '@mui/material/colors';
 
 function NavBar() {
@@ -83,8 +82,14 @@ function NavBar() {
             <Nav.Link href="/rent" style={customNavbarLinkStyle}>
             Rent A Gear
             </Nav.Link>
+            <Nav.Link href="/findPeer" style={customNavbarLinkStyle}>
+            Find Peer
+            </Nav.Link>
             <Nav.Link href="/blogs" style={customNavbarLinkStyle}>
               Shorts
+            </Nav.Link>
+            <Nav.Link href="/hiddenGems" style={customNavbarLinkStyle}>
+              Hidden Gems
             </Nav.Link>
             <Nav.Link href="/faq" style={customNavbarLinkStyle}>
               FAQ

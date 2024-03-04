@@ -12,10 +12,6 @@ const validationSchema = Yup.object().shape({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
-  phone: Yup.string()
-    .matches(/^[0-9]{10}$/, "Phone number must be 10 digits")
-    .required("Phone is required"),
-  address: Yup.string().required("Address is required"),
   password: Yup.string()
     .min(6, "Password must be at least 6 characters")
     .required("Password is required"),
@@ -26,10 +22,10 @@ function Signup() {
   const initialValues = {
     name: "",
     email: "",
-    phone: "",
-    address: "",
     password: "",
   };
+
+
   const BASE_URL = process.env.REACT_APP_BASE_URL;
   const onSubmit = (values, { resetForm }) => {
     
@@ -44,15 +40,14 @@ function Signup() {
       .then((data) => {
         if (data.msg === "error") alert("Email already exist");
         else {
-          alert("Registration Successfull");
-          nav("/login");
+          
+          nav("/profileDetails", { state: { email: values.email } });
         }
       })
       .catch((error) => {
         console.error("Error:", error);
       });
 
-    // console.log("Form submitted with values:", values);
     resetForm(initialValues);
   };
 
@@ -111,36 +106,6 @@ function Signup() {
                     className="form-control"
                   />
                   <ErrorMessage name="password" component="div" className="text-danger" />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="phone">Phone</label>
-                  <Field
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="form-control"
-                  />
-                  <ErrorMessage
-                    name="phone"
-                    component="div"
-                    className="text-danger"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="address">Address</label>
-                  <Field
-                    as="textarea"
-                    id="address"
-                    name="address"
-                    className="form-control"
-                  />
-                  <ErrorMessage
-                    name="address"
-                    component="div"
-                    className="text-danger"
-                  />
                 </div>
 
                 <button

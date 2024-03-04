@@ -4,9 +4,57 @@ import Footer from './Footer';
 import { Container, Col, Row, Stack, Card } from 'react-bootstrap';
 import trekData from '../data/treks.json';
 import Fade from 'react-reveal/Fade';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import Box from '@mui/material/Box';
+import { useNavigate } from "react-router-dom";
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 import "./Trek.css";
 
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
+
 const Treks = () => {
+
+  const [open, setOpen] = React.useState(false);
+
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
+
+  const nav = useNavigate();
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
+  
+
+  const handleApiCall = () => {
+    fetch(`${BASE_URL}/getinfo`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    })
+      .then((data) => data.json())
+      .then((userData) => {
+        nav("/addTreks");
+      })
+      .catch((err) => {
+        handleClick();
+      });
+  };
   const [fadeStyle, setFadeStyle] = useState('left');
 
  
@@ -71,7 +119,24 @@ const Treks = () => {
                 </Col>
               </Row>
             </Fade>
-          ))}
+          ))}<Box
+          sx={{
+            position: "fixed",
+            bottom: 16,
+            right: 16,
+            zIndex: 1000,
+            '& > :not(style)': { m: 1 },
+          }}
+        >
+          <Fab color="primary" onClick={handleApiCall} aria-label="add">
+            <AddIcon />
+          </Fab>
+        </Box>
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+        You are not Authorised , Please Login .
+        </Alert>
+      </Snackbar>
         </Stack>
       </Container>
 
