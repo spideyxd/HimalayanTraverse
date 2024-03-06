@@ -51,11 +51,13 @@ const Rent = () => {
                     <Card.Body>
                       <Card.Title>{trek.heading}</Card.Title>
                       <Card.Text>{trek.content} /Day</Card.Text>
-                      <Link to="/address">
-                        <Button className="btn btn-secondary text-light" variant="primary">
+                      {/* <Link to="/address"> */}
+                      <a href="https://pages.razorpay.com/stores/st_NiLUxJfZOJ2i3c">  <Button className="btn btn-secondary text-light" variant="primary">
                           Rent
                         </Button>
-                      </Link>
+                        </a>
+                      
+                      {/* </Link> */}
                     </Card.Body>
                   </Card>
                 </Col>

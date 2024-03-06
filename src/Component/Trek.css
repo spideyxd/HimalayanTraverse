@@ -1,20 +1,16 @@
-/* YourComponent.css */
-
-/* Original styles */
 .card-img {
-    width: 40%;
-    border-radius: 25px;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  width: 40%;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
-  
-  
-  /* Hover styles */
-  .card.hovered {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-img.hovered-img {
-    transform: scale(1.1);
-  }
-  
+
+/* Add the hover styles directly to the .card class when it has the 'hovered' class */
+.card.hovered {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply the hover effect to the .card-img within a .card with 'hovered' class */
+.card.hovered .card-img {
+  transform: scale(1.1);
+}

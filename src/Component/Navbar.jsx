@@ -82,7 +82,7 @@ function NavBar() {
             <Nav.Link href="/rent" style={customNavbarLinkStyle}>
             Rent A Gear
             </Nav.Link>
-            <Nav.Link href="/findPeer" style={customNavbarLinkStyle}>
+            <Nav.Link href="/PeerFinderForm" style={customNavbarLinkStyle}>
             Find Peer
             </Nav.Link>
             <Nav.Link href="/blogs" style={customNavbarLinkStyle}>

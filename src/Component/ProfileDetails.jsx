@@ -67,6 +67,10 @@ const medicalConditions = [
 const pastTreks = [
   "Everest Base Camp",
   "K2 Base Camp",
+  "Madhyamaeshwar",
+  "Chandrashila",
+  "Kartik Swami",
+  "Kuari Pass",
 ];
 
 function getStyles(name, selectedConditions, theme) {
@@ -148,7 +152,7 @@ function ProfileDetails() {
     <>
       <NavBar />
       <Container
-        className="d-flex justify-content-center align-items-center"
+        className="d-flex justify-content-center align-items-center mt-5" 
         style={{ minHeight: "100vh" }}
       >
         <Card>

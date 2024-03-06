@@ -25,14 +25,15 @@ import PersonalProfile from "./Component/Dashboard";
 import ProfileDetails from "./Component/ProfileDetails";
 import FindPeer from "./Component/FindPeer";
 import HiddenGems from "./Component/HiddenGems";
-import { ChakraProvider } from '@chakra-ui/react'
-
+import PeerFinderForm from "./Component/PeerFinderForm";
+import { GoogleOAuthProvider } from '@react-oauth/google';
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 
 
 root.render(
   <React.StrictMode>
-    {/* <ChakraProvider> */}
+ <GoogleOAuthProvider clientId="549601688588-jip8et9fnckk14e72ieu55387hu0gh12.apps.googleusercontent.com">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -56,9 +57,10 @@ root.render(
         <Route path="dashboard" element={<PersonalProfile/>} />
         <Route path="findPeer" element={<FindPeer/>} />
         <Route path="HiddenGems" element={<HiddenGems/>} />
+        <Route path="PeerFinderForm" element={<PeerFinderForm/>} />
       </Routes>
-    </BrowserRouter>
-    {/* </ChakraProvider> */}
+    </BrowserRouter></GoogleOAuthProvider>
+ 
   </React.StrictMode>
 );
 

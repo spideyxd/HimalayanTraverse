@@ -62,7 +62,7 @@ const AddTreks = () => {
             setDescription("");
             setLocation("");
             setError("");
-          nav("/treks");
+          nav("/HiddenGems");
           window.location.reload();
         } else {
           console.error("Failed to add this hidden gem");
