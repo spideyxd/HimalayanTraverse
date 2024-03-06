@@ -36,8 +36,8 @@ const AddressForm = () => {
         currentDate,
       };
 
-      console.log(payload);
-
+      // console.log(payload);
+      const linkToRedirect = "https://pages.razorpay.com/stores/st_NiLUxJfZOJ2i3c";
       fetch(`${process.env.REACT_APP_BASE_URL}/send-message`, {
         method: "POST",
         mode: "cors",
@@ -49,7 +49,7 @@ const AddressForm = () => {
         .then((response) => response.json())
         .then((data) => {
           console.log("Address saved successfully:", data);
-          nav("/payment");
+          window.location.href = linkToRedirect;
         })
         .catch((error) => {
           console.error("Error saving address:", error);
