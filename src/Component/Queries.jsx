@@ -31,6 +31,7 @@ const Queries = () => {
         if (!userData) {
           nav("/login");
         }
+        console.log(userData);
         setUser(userData);
 
         // Fetch queries based on user data after setUser

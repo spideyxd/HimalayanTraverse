@@ -25,8 +25,11 @@ import PersonalProfile from "./Component/Dashboard";
 import ProfileDetails from "./Component/ProfileDetails";
 import FindPeer from "./Component/FindPeer";
 import HiddenGems from "./Component/HiddenGems";
+import Chats from "./Component/Chats";
 import PeerFinderForm from "./Component/PeerFinderForm";
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import FindingTravelBuddy from "./Component/FindingTravelBuddy";
+import AllChat from "./Component/AllChat";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
@@ -56,8 +59,10 @@ root.render(
         <Route path="profileDetails" element={<ProfileDetails/>} />
         <Route path="dashboard" element={<PersonalProfile/>} />
         <Route path="findPeer" element={<FindPeer/>} />
+        <Route  path="/chats/:participantId/:userId" element={<Chats/>} />
+        <Route path="AllChat" element={<AllChat/>} />
         <Route path="HiddenGems" element={<HiddenGems/>} />
-        <Route path="PeerFinderForm" element={<PeerFinderForm/>} />
+        <Route path="FindingTravelBuddy" element={<FindingTravelBuddy/>} />
       </Routes>
     </BrowserRouter></GoogleOAuthProvider>
  
