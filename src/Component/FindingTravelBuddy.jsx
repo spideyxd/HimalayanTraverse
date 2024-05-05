@@ -10,7 +10,6 @@ import Fade from "react-reveal/Fade";
 import io from "socket.io-client";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import Badge from '@mui/material/Badge';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -120,7 +119,7 @@ const FindingTravelBuddy = () => {
         author: user.name,
         content: query,
       };
-
+// console.log(newQuery);
       fetch(`${BASE_URL}/postFindingBuddy`, {
         method: "POST",
         headers: {
@@ -149,6 +148,7 @@ const FindingTravelBuddy = () => {
       queryEmail: email,
       userData: user,
     };
+    // console.log(dataToSend);
     fetch(`${BASE_URL}/addInterestedUser`, {
       method: "POST",
       headers: {

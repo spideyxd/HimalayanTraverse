@@ -11,7 +11,7 @@ const Chat = () => {
   const [user, setUser] = React.useState({});
   const BASE_URL = process.env.REACT_APP_BASE_URL;
   const nav = useNavigate();
-  const [socket, setSocket] = useState(null);
+  const [socket, setSocket] = useState(null); 
   const messagesEndRef = useRef(null);
 
   // Function to scroll to the bottom of the messages container
@@ -217,7 +217,7 @@ const Chat = () => {
                       </div>
                     )}
                     <div className="message-content">{message.content}</div>
-                    
+                     
                   </div>
                 ))
               ) : (

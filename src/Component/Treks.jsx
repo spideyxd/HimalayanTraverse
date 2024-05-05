@@ -119,24 +119,7 @@ const Treks = () => {
                 </Col>
               </Row>
             </Fade>
-          ))}<Box
-          sx={{
-            position: "fixed",
-            bottom: 16,
-            right: 16,
-            zIndex: 1000,
-            '& > :not(style)': { m: 1 },
-          }}
-        >
-          <Fab color="primary" onClick={handleApiCall} aria-label="add">
-            <AddIcon />
-          </Fab>
-        </Box>
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-        You are not Authorised , Please Login .
-        </Alert>
-      </Snackbar>
+          ))}
         </Stack>
       </Container>
 

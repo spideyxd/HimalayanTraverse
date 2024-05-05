@@ -33,9 +33,9 @@ function NavBar() {
     setShowDropdown(!showDropdown);
   };
 
-  const handleConversation=()=>{
+  const handleConversation = () => {
     nav("/AllChat");
-  }
+  };
 
   React.useEffect(() => {
     const socket = io("http://localhost:8000");
@@ -87,32 +87,32 @@ function NavBar() {
       });
   };
 
-
   const handleItemClick = (notificationId, user) => {
-
     // Call the API to add the notification ID and user data to the database as conversations
     fetch(`${BASE_URL}/addNotificationAsConversation/${notificationId}`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         // Add any other headers if needed
       },
       body: JSON.stringify({ user }), // Send user data in the request body
     })
       .then((response) => {
         if (response.ok) {
-          console.log('Notification ID and user data added as conversation successfully');
+          console.log(
+            "Notification ID and user data added as conversation successfully"
+          );
           nav("/AllChat");
         } else {
-          console.error('Failed to add notification ID and user data as conversation');
+          console.error(
+            "Failed to add notification ID and user data as conversation"
+          );
         }
       })
       .catch((error) => {
-        console.error('Error:', error);
+        console.error("Error:", error);
       });
   };
-  
-
 
   return (
     <Navbar fixed="top" expand="md" className="bg-dark">
@@ -176,7 +176,9 @@ function NavBar() {
                 >
                   {user.notifications.map((notification, index) => (
                     <React.Fragment key={index}>
-                      <NavDropdown.Item onClick={() => handleItemClick(notification.id,user)}>
+                      <NavDropdown.Item
+                        onClick={() => handleItemClick(notification.id, user)}
+                      >
                         {notification.message}
                       </NavDropdown.Item>
                       {index !== user.notifications.length - 1 && <hr />}{" "}
@@ -219,13 +221,12 @@ function NavBar() {
                       zIndex: 1000,
                     }}
                   >
-                     <NavDropdown.Item onClick={handleConversation}>
+                    <NavDropdown.Item onClick={handleConversation}>
                       Conversations
                     </NavDropdown.Item>
                     <NavDropdown.Item onClick={handleLogout}>
                       Logout
                     </NavDropdown.Item>
-                   
                   </NavDropdown>
                 )}
               </div>
