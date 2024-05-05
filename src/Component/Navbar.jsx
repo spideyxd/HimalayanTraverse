@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import { deepOrange } from "@mui/material/colors";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import Badge from "@mui/material/Badge";
 import io from "socket.io-client";
@@ -35,6 +34,10 @@ function NavBar() {
 
   const handleConversation = () => {
     nav("/AllChat");
+  };
+
+  const handleProfile = () => {
+    nav("/dashboard");
   };
 
   React.useEffect(() => {
@@ -87,32 +90,28 @@ function NavBar() {
       });
   };
 
-  const handleItemClick = (notificationId, user) => {
-    // Call the API to add the notification ID and user data to the database as conversations
-    fetch(`${BASE_URL}/addNotificationAsConversation/${notificationId}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // Add any other headers if needed
-      },
-      body: JSON.stringify({ user }), // Send user data in the request body
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log(
-            "Notification ID and user data added as conversation successfully"
-          );
-          nav("/AllChat");
-        } else {
-          console.error(
-            "Failed to add notification ID and user data as conversation"
-          );
+
+
+  const fetchDataAndSendToComponent = (notificationId, user) => {
+    console.log("hi");
+    fetch(`${BASE_URL}/openDashboard/${notificationId}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
+        return response.json();
       })
-      .catch((error) => {
-        console.error("Error:", error);
+      .then(data => {
+        console.log(data);
+        // Assuming you have a component called `NextComponent` where you want to send the data
+        nav("/PeerDashboard", { state: { responseData: data } })
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        // Handle error if needed
       });
-  };
+  }
+  
 
   return (
     <Navbar fixed="top" expand="md" className="bg-dark">
@@ -174,17 +173,19 @@ function NavBar() {
                     zIndex: 1000,
                   }}
                 >
-                  {user.notifications.map((notification, index) => (
-                    <React.Fragment key={index}>
-                      <NavDropdown.Item
-                        onClick={() => handleItemClick(notification.id, user)}
-                      >
-                        {notification.message}
-                      </NavDropdown.Item>
-                      {index !== user.notifications.length - 1 && <hr />}{" "}
-                      {/* Add horizontal line if not the last notification */}
-                    </React.Fragment>
-                  ))}
+                  {user.notifications
+                    .slice()
+                    .reverse()
+                    .map((notification, index) => (
+                      <React.Fragment key={index}>
+                        <NavDropdown.Item
+                          onClick={() => fetchDataAndSendToComponent(notification.id, user)}
+                        >
+                          {notification.message}
+                        </NavDropdown.Item>
+                        {index !== user.notifications.length - 1 && <hr />}
+                      </React.Fragment>
+                    ))}
                 </NavDropdown>
               )}
             </div>
@@ -206,8 +207,9 @@ function NavBar() {
                   onClick={handleDropdownToggle}
                   style={{ cursor: "pointer" }}
                 >
-                  {user.name[0]}
+                  {user.name.charAt(0).toUpperCase()}
                 </Avatar>
+
                 {showDropdown && (
                   <NavDropdown
                     title={null}
@@ -220,7 +222,9 @@ function NavBar() {
                       right: 0,
                       zIndex: 1000,
                     }}
-                  >
+                  ><NavDropdown.Item onClick={handleProfile}>
+                  Profile
+                </NavDropdown.Item>
                     <NavDropdown.Item onClick={handleConversation}>
                       Conversations
                     </NavDropdown.Item>

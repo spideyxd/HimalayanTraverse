@@ -183,7 +183,7 @@ const Blogs = () => {
         .sort((a, b) => b.likeCount - a.likeCount) // Sort in descending order based on likeCount
         .map((trek, idx) =>(
                 <Col style={{ marginTop: "8rem" }} md="mx-auto" key={idx}>
-                  <Card className="mx-2" style={{ width: "18rem" }}>
+                  <Card className="mx-2" style={{ width: "18rem",height:"50vh" }}>
                     <Card.Img
                       variant="top"
                       src={trek.imgSrc}

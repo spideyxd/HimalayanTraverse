@@ -42,7 +42,8 @@ const Post = ({ timestamp, title, content, author }) => {
   return (
     <Card>
       <Card.Body>
-        <Card.Title className="font-weight-bold">{author} </Card.Title>
+        <Card.Title className="font-weight-bold">{author.charAt(0).toUpperCase() + author.slice(1)}
+ </Card.Title>
          <span className="text-muted small" style={{fontSize:"0.9em"}}>{getFormattedTimestamp()}</span>
         <Card.Text>{content}</Card.Text>
       </Card.Body>

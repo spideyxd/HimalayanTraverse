@@ -66,7 +66,6 @@ const Feed = () => {
         author: user.name,
       };
 
-      // Make a POST request to your server to save the query
       fetch(`${BASE_URL}/postQuery`, {
         method: "POST",
         headers: {
@@ -102,14 +101,11 @@ const Feed = () => {
         const updatedQuery = await response.json();
         window.location.reload();
         // console.log('Comment posted successfully:', updatedQuery);
-
-        // Optionally, update your component state or take other actions as needed
       } else {
         throw new Error("Failed to post comment");
       }
     } catch (error) {
       console.error("Error posting comment:", error);
-      // Handle the error, show an error message, or take appropriate act ion
     }
   };
 
@@ -133,14 +129,13 @@ const Feed = () => {
             className="bg-post text-dark mb-3 "
           >
             <Card.Body>
-              {/* <h1>Query</h1> */}
               <Post
                 title="Query"
                 timestamp={queryy.timestamp}
                 author={queryy.author}
                 content={queryy.content}
               />
-              {/* <h6>Comments</h6> */}
+
               <div>
                 <Form.Group>
                   <Form.Control

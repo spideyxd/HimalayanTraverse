@@ -15,7 +15,7 @@ const Faq = () => {
   const headerStyles = {
     fontFamily: "'Fira Sans', sans-serif",
     fontWeight: 'bold',
-    fontSize:"5rem", // Make the header text bold
+    fontSize:"5rem", 
     fontWeight:"600"
   };
 

@@ -28,6 +28,7 @@ const FindingTravelBuddy = () => {
 
   const handleClose = () => {
     setOpen(false);
+    window.location.reload();
   };
 
    

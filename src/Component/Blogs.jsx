@@ -4,12 +4,12 @@ import Footer from "./Footer";
 import data from "../data/blogs.json";
 import { Container, Col, Row, Stack, Card, Button } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
-import Fab from '@mui/material/Fab';
-import AddIcon from '@mui/icons-material/Add';
-import Box from '@mui/material/Box';
+import Fab from "@mui/material/Fab";
+import AddIcon from "@mui/icons-material/Add";
+import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -29,14 +29,12 @@ const Blogs = () => {
   };
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
     setOpen(false);
   };
-
-  
 
   const handleApiCall = () => {
     fetch(`${BASE_URL}/getinfo`, {
@@ -72,7 +70,7 @@ const Blogs = () => {
           <Fade>
             <Row xs={1} sm={2} md={3}>
               {treks.map((trek, idx) => (
-                <Col style={{marginTop:"8rem"}} md="mx-auto" key={idx}>
+                <Col style={{ marginTop: "8rem" }} md="mx-auto" key={idx}>
                   <Card className="mx-2" style={{ width: "18rem" }}>
                     <Card.Img
                       variant="top"
@@ -94,7 +92,9 @@ const Blogs = () => {
                           variant="primary"
                           onClick={() => handleReadMore(idx)}
                         >
-                          {expandedCards.includes(idx) ? "Read Less" : "Read More"}
+                          {expandedCards.includes(idx)
+                            ? "Read Less"
+                            : "Read More"}
                         </Button>
                       )}
                     </Card.Body>
@@ -110,7 +110,7 @@ const Blogs = () => {
             bottom: 16,
             right: 16,
             zIndex: 1000,
-            '& > :not(style)': { m: 1 },
+            "& > :not(style)": { m: 1 },
           }}
         >
           <Fab color="primary" onClick={handleApiCall} aria-label="add">
@@ -118,10 +118,10 @@ const Blogs = () => {
           </Fab>
         </Box>
         <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-        You are not Authorised , Please Login .
-        </Alert>
-      </Snackbar>
+          <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
+            You are not Authorised , Please Login .
+          </Alert>
+        </Snackbar>
       </Stack>
       <Footer />
     </>

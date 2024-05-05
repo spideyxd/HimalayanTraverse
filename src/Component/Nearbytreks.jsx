@@ -7,7 +7,6 @@ import {
   Container,
   Col,
   Row,
-  Stack,
   Card,
   Form,
   Button,
@@ -112,13 +111,12 @@ function findNearbyPoints(baseLat, baseLon, points, dis) {
 }
 
 function Nearbytreks() {
-  const [location, setLocation] = useState(null); // Initialize with null
+  const [location, setLocation] = useState(null);
   const [nearbyPoints, setNearbyPoints] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(3);
 
   useEffect(() => {
-    // Use useEffect to get the user's location when the component mounts
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -132,7 +130,7 @@ function Nearbytreks() {
     } else {
       console.log("Geolocation is not supported by this browser.");
     }
-  }, []); // Empty dependency array ensures this runs once on component mount
+  }, []);
 
   const handleFindNearbyPoints = () => {
     console.log(location);
@@ -146,7 +144,6 @@ function Nearbytreks() {
       return;
     }
 
-    // Reset nearbyPoints to an empty array before finding nearby points
     setNearbyPoints([]);
     const distance = parseFloat(distanceInput);
     const points = treks.trekking_sites;
@@ -159,11 +156,9 @@ function Nearbytreks() {
     );
     console.log(result);
     setNearbyPoints(result);
-    
   };
 
   useEffect(() => {
-    // This effect will run every time nearbyPoints state changes
     if (nearbyPoints.length > 0) {
       scrollToBelowContainer();
     }
@@ -173,7 +168,6 @@ function Nearbytreks() {
   const scrollToBelowContainer = () => {
     belowContainerRef.current.scrollIntoView({ behavior: "smooth" });
   };
-
 
   const [distanceInput, setDistanceInput] = useState("");
 
@@ -217,7 +211,6 @@ function Nearbytreks() {
               variant="warning"
               onClick={() => {
                 handleFindNearbyPoints();
-                
               }}
             >
               Find Nearby Points
@@ -228,37 +221,58 @@ function Nearbytreks() {
 
       <Container className="mt-5 d-flex justify-content-center">
         <Row ref={belowContainerRef} xs={1} sm={2} md={3}>
-          {currentItems.map((point, idx) => ( 
+          {currentItems.map((point, idx) => (
             <Col style={{ marginTop: "8rem" }} md="mx-auto" key={idx}>
-             <Card className="mx-2 bg-light" style={{ width: "18rem", transition: "transform 0.5s, box-shadow 0.5s" }} onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "perspective(1000px) rotateY(20deg)";
-        e.currentTarget.style.boxShadow = "0 10px 20px rgba(0, 0, 0, 1)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "none";
-        e.currentTarget.style.boxShadow = "none";
-      }}>
-  <Card.Img variant="top" src={point.ImgSrc} width="286" height="180" />
-  <Card.Body>
-    <Card.Title>{point.name}</Card.Title>
-    <Card.Text>
-      <strong>Location:</strong> {point.location}<br />
-      <strong>Best Time:</strong> {point.BestTime}<br />
-      <strong>Cost:</strong>  &#8377;{point.cost}<br />
-      <strong>Duration:</strong> {point.duration}<br />
-      <strong>Difficulty:</strong> {point.difficulty}<br />
-      <strong>Altitude:</strong> {point.Altitude}<br />
-      <strong>Gear Needed:</strong> {point.gearNeeded.join(", ")}<br />
-      <strong>Basecamp:</strong> {point.Basecamp}<br />
-    </Card.Text>
-  </Card.Body>
-</Card>
-
+              <Card
+                className="mx-2 bg-light"
+                style={{
+                  height:"70vh",
+                  width: "18rem",
+                  transition: "transform 0.5s, box-shadow 0.5s",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform =
+                    "perspective(1000px) rotateY(20deg)";
+                  e.currentTarget.style.boxShadow =
+                    "0 10px 20px rgba(0, 0, 0, 1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "none";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                <Card.Img
+                  variant="top"
+                  src={point.ImgSrc}
+                  width="286"
+                  height="180"
+                />
+                <Card.Body>
+                  <Card.Title>{point.name}</Card.Title>
+                  <Card.Text>
+                    <strong>Location:</strong> {point.location}
+                    <br />
+                    <strong>Best Time:</strong> {point.BestTime}
+                    <br />
+                    <strong>Cost:</strong> &#8377;{point.cost}
+                    <br />
+                    <strong>Duration:</strong> {point.duration}
+                    <br />
+                    <strong>Difficulty:</strong> {point.difficulty}
+                    <br />
+                    <strong>Altitude:</strong> {point.Altitude}
+                    <br />
+                    <strong>Gear Needed:</strong> {point.gearNeeded.join(", ")}
+                    <br />
+                    <strong>Basecamp:</strong> {point.Basecamp}
+                    <br />
+                  </Card.Text>
+                </Card.Body>
+              </Card>
             </Col>
           ))}
         </Row>
       </Container>
-
       <Container className="mt-5 d-flex justify-content-center">
         <Pagination>
           {Array.from({

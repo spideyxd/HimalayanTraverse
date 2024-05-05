@@ -1,15 +1,14 @@
-[
+[{
+  "title": "About uttrakhand treks.",
+  "description": "Uttarakhand, nestled in the lap of the majestic Himalayas, offers a plethora of treks, each with its own unique charm and challenges. From the spiritual haven of Har Ki Dun to the adrenaline-pumping trails of Roopkund, Uttarakhand caters to trekkers of all skill levels and interests. The Valley of Flowers trek is a botanical paradise, boasting a vibrant tapestry of alpine flora, while the Kuari Pass trek treats adventurers to panoramic views of towering peaks including Nanda Devi and Dronagiri. For those seeking solitude amidst pristine wilderness, the Pindari Glacier trek offers a remote escape, while the trek to Deoria Tal enchants with its serene lake reflecting the snow-capped peaks. Uttarakhand's treks not only offer breathtaking landscapes but also provide an opportunity to immerse oneself in the rich cultural tapestry of the region, making each trek a truly unforgettable experience.",
+  "location": "Uttarakhand",
+  "imgSrc": "https://clubmahindra.gumlet.io/blog/media/section_images/visit-in-u-b6fa5a61e8c38c7.jpg?w=376&dpr=2.6"
+},
   {
     "title": "Har Ki Dun",
     "description": "Har Ki Dun is a mesmerizing valley situated in the Garhwal Himalayas. The trek takes you through dense pine forests, quaint villages, and offers breathtaking views of snow-capped peaks. The base camp in Sankri serves as a gateway to this enchanting trek.",
     "location": "Uttarakhand - Sankri",
     "imgSrc": "https://www.bikatadventures.com/images/Expeditions/IMG980x500/img-Har-Ki-Dun-Trek-Bikat-Adventures.jpg"
-  },
-  {
-    "title": "Roopkund",
-    "description": "Roopkund is a high-altitude glacial lake nestled in the Uttarakhand Himalayas. The trek is known for its mysterious skeletal remains and stunning alpine meadows. Lohajung, the base camp, is the starting point for this adventurous journey.",
-    "location": "Uttarakhand - Lohajung",
-    "imgSrc": "https://wanderon.in/_next/image?url=https%3A%2F%2Fstatic.wanderon.in%2Fwp-content%2Fuploads%2F2023%2F10%2Ftop-min-6.jpg&w=1920&q=75"
   },
   {
     "title": "Triund",
@@ -23,12 +22,7 @@
     "location": "Uttarakhand - Sankri",
     "imgSrc": "https://www.bikatadventures.com/images/Gallery/IMG1000X548/img-kedarkantha-trek2102-Bikat-Adventures.jpg"
   },
-  {
-    "title": "Hampta Pass",
-    "description": "Hampta Pass is a trek that takes you from the lush green Kullu Valley to the desert-like Spiti Valley. The journey is marked by river crossings, lush meadows, and panoramic vistas. The trek starts from Manali, the gateway to the beautiful Himachal Pradesh.",
-    "location": "Himachal Pradesh - Manali",
-    "imgSrc": "https://himalayanambition.in/wp-content/uploads/2022/08/geasweq9tlygef2obqv1.jpg"
-  },
+ 
   {
     "title": "Valley of Flowers",
     "description": "Valley of Flowers is a vibrant and colorful national park in Uttarakhand. The trek unveils a floral paradise with a variety of alpine flowers. The base camp in Govindghat is the starting point for this enchanting journey into nature's beauty.",
@@ -40,23 +34,7 @@
     "description": "Beas Kund is a high-altitude alpine lake surrounded by majestic peaks. The trek, starting from Manali in Himachal Pradesh, offers stunning views of the surrounding mountains, including the magnificent Friendship Peak.",
     "location": "Himachal Pradesh - Manali",
     "imgSrc": "https://tripvana.in/wp-content/uploads/2021/04/FB_IMG_1606990808786.jpg"
-  },
-  {
-    "title": "Test Title",
-    "description": "Test Desc",
-    "location": "Test location",
-    "imgSrc": "https://www.bikatadventures.com/images/Gallery/IMG1000X548/img-kedarkantha-trek2102-Bikat-Adventures.jpg"
-  },
-  {
-    "title": "dgf",
-    "description": "gsdg",
-    "location": "gsd",
-    "imgSrc": "gds"
-  },
-  {
-    "title": "Madhyamaheshwar",
-    "description": "One of the kedar in panchkedar.",
-    "location": "https://maps.app.goo.gl/bP791CMGYD58zQCEA",
-    "imgSrc": "https://majesticjourney.in/wp-content/uploads/2022/07/madmaheshwar-temple.jpg"
   }
+
+  
 ]
